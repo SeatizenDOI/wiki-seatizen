@@ -1,0 +1,15 @@
+ alors pour envoyer une session donc il faut faire quelques étapes donc il faut quand même donc il
+ faut avoir sa session locale il faut avoir rempli un fichier de suivi de session qui a cette en tête
+ là et donc nous avons une colonne c'est le nom de la session une colonne ça va être les créateurs
+ une colonne avec le data manager et on peut rajouter d'autres colonnes en fonction de ce
+ qu'on veut les noms qui apparaissent dans la colonne par exemple créateurs ça va être les
+ initiales et ces initiales on va les définir dans un autre fichier csv qu'on appelle contributors
+ voilà donc là par exemple suivez cette en tête là donc ces deux fichiers vous devrez les lier dans
+ le fichier metadata.json donc je vous mets un exemple ici et vous pouvez remplir le fichier comme ceci
+ actuellement alors en gros le code là actuellement il le il décide tout seul de la de la décide tout
+ celles du type de la plateforme d'acquisition dire qu'il va regarder le patron d'acquisition si c'est
+ lui avait si c'est sv si uvc scuba je sais pas si c'est implémenté pour scuba je pense que scuba
+ c'est c'était implémenté dans comme une classe spéciale pour continuer uvc c'est implémenté spécialement
+ pour les codes enfin pour les sessions d'amoros donc attention et il me semble que pour la métadonnée
+ iso 1915 faut faire attention parce que c'est spécifique spécifique à ifromer donc si d'autres
+ personnes veulent utiliser ça il faudra changer un peu le les noms utilisés donc

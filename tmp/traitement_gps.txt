@@ -1,0 +1,9 @@
+ Alors en fait aussi pour Plancha, on peut l'utiliser en PPK mais il y a plein d'autres
+ façons de l'utiliser et ça notamment dans PlanchaConfig.json. On peut utiliser par exemple
+ les bases RGB de l'IGN. Donc par défaut si le dossier base ne contient rien, il va essayer
+ d'aller taper dans la base qu'on lui a donnée. Donc il y a deux bases je crois dans l'Ouest,
+ il y a le port, Saint-Leu, Maïdo elle est très haute donc on la prend pas. Donc on fait
+ le port, le pot ou alors Saint-Leu, S-N-T-L ou S-T-L-E. Donc je vous conseille d'aller regarder
+ la documentation sur Centiped, sur la page web de Centiped. Vous trouverez toutes les informations.
+ Sinon, voilà. Sinon sur la documentation de la page Plancha Workflow, vous trouverez
+ d'autres points pour jouer avec mais je pense que les paramètres tactuels sont bons.

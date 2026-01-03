@@ -1,0 +1,20 @@
+ bonjour je vais vous présenter comment utiliser comment traiter une session de drone pour cela
+ en fait pour traiter une session de drone en fait on va commencer par extraire les données
+ du drone en récupérant les images qui sont sur la carte et saisie du drone donc ça ne marche pas
+ en fait avec les vidéos parce que dans les vidéos on ne peut pas récupérer la métadonnée gps
+ alors qu'il nous faut des images et avec une métadonnée gps comprise dedans donc les images
+ de drones vont être stockés dans notre dossier dcim alors attention parce que il faut si le si votre
+ drone stocke les images dans différents dossiers il se peut qu'il y ait plusieurs fois les images
+ avec le même nom et si vous les mettez tout dans le dossier dcim elle risque de se de s'écraser entre
+ elles donc peut-être à vérifier et à renommer si besoin donc une fois que les images dans le dossier
+ dcim on va pouvoir passer au premier workflow donc comme pour l'intelligence artificielle on a besoin
+ d'avoir l'ortho photo je vous conseille d'appliquer d'abord odm pour produire l'ortho photo dans mon
+ cas nous on envoie les données sur data more donc vous utilisez filesia pour envoyer les données sur la taire
+ et ensuite vous appliquez le script script pbs associé donc je mettrai les paramètres odm associés
+ une fois que nous avons l'ortho photo nous allons appliquer le code drone-workflow pour extraire les méthodes
+ des images et ensuite on va pouvoir construire différents fichiers autour de ça et nous allons
+ appliquer l'intelligence artificielle the point is the mask donc qui est une il de segmentation et qui va
+ extraire les classes qui va extraire cinq classes et qui va s'augmenter l'ortho photo et c'est
+ important d'avoir l'ortho photo pour réaliser ça voilà et ensuite une fois que tout ça est prêt
+ normalement vous avez une session prête à être envoyé sur zenodo et je vous invite à écouter ce tutoriel
+ Oui.
