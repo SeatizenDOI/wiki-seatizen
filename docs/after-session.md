@@ -83,7 +83,9 @@ Dans le fichier csv, on doit renseigner l'heure de la première image (`time_fir
 Pour obtenir l'heure et le numéro de l'image, il faut exécuter le script avec cette ligne de commande: `python workflow.py -csv csv/2025_plancha.csv -os`. Cela va juste découper la première vidéo en image, réaliser le PPK et la Bathy. Une fois que le script a tourné, on va dans le dossier PROCESSED_DATA/FRAMES et on cherche la frame qui contient l'heure, on la renseigne dans le fichier csv avec le numéro de la frame. 
 <!-- TODO IMAGE -->
 
-On regarde si le GPS a bien marché en regardant le fichier .png dans le dossier 
+On regarde si le GPS a bien marché en regardant le fichier `GPS_ppk_position_accuracy.png` dans le dossier `GPS/DEVICE`. Un bon géoréférencement doit contenir environ 90% de Q1. Si ce n'est pas le cas, il faut regarder les données de la base.
+
+Enfin, on vérifie si la bathy a bien marché. On va dans le dossier `PROCESSED_DATA/BATHY` et on regarde les fichiers `depth_samples_utmcoord_preproc.png` et `depth_samples_utmcoord_postproc_linear.png`. Il peut y avoir 
 
 ### DEuxième étape
 
