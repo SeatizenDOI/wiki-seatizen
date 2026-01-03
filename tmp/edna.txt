@@ -1,0 +1,161 @@
+ Alors bonjour à tous, là je vais vous expliquer comment réaliser un pompage.
+ En fait, ça va être le tutoriel du Grand Port Maritime pour faire le pompage.
+ Alors déjà, qu'est-ce qu'il nous faut comme matos ?
+ Il nous faut le Blue Boat, sur le Blue Boat il faut mettre l'antenne,
+ il nous faut la Bay Station avec son antenne.
+ Attention, ne jamais démarrer le Blue Boat ou la Bay Station sans son antenne,
+ ça peut tout tuer.
+ Il faut toujours que l'antenne soit vissée, c'est important.
+ Le GPT, tu peux mettre ça en gros.
+ Ensuite, il nous faut un ordinateur et il nous faut aussi un Reach M2 collé au PC.
+ Alors pourquoi il nous faut ça ? Je reviens pour la suite.
+ Je vais revenir maintenant.
+ En fait, il nous faut ça parce que quand on est sur le bateau,
+ il faut pouvoir dire au chauffeur là où on est, là et là où on veut aller par rapport au point de pompage.
+ C'est-à-dire que le point, le GPS en fait, vous allez ouvrir OpenCPN,
+ charger les différents points de pompage qui sont dans un shapefile
+ et montrer au pilote là où on va.
+ Donc c'est important d'avoir ce GPS.
+ Parce que sinon, quand on est sur la plage, ça ne sert à rien.
+ Bon, ensuite, on doit se connecter au BlueBot.
+ Alors le BlueBot, déjà, on va mettre les batteries à l'intérieur.
+ Les batteries.
+ Il faut bien brancher les deux câbles à la boîte.
+ Et une fois qu'on a fait ça, qu'on a branché les deux câbles,
+ on peut l'allumer.
+ Donc il faut tourner le petit bouton.
+ Il faut tourner au maximum.
+ En fait, ça va écraser deux contacts.
+ Et là, ça démarre.
+ Le BlueBot, il démarre et tout.
+ Et une fois qu'il a fait pipi et que la LED blanche clignote,
+ c'est qu'il est démarré.
+ Alors pour se connecter à lui, il y a plusieurs façons.
+ Et il faut aussi allumer la Base Station.
+ En fait, la Base Station agit comme un routeur Wi-Fi.
+ Et il faut se connecter à elle.
+ Alors pour cela, vous allez allumer votre ordinateur.
+ Vous allez dans paramètres Wi-Fi, paramètres de l'adaptateur.
+ Vous faites un clic droit sur...
+ Vous faites un clic droit sur le truc Wi-Fi.
+ Vous allez dans configuration IPv4.
+ Et normalement, configuration IPv4, elle est en automatique.
+ Donc c'est votre box qui vous attribue...
+ Normalement, c'est ça.
+ C'est votre box qui vous attribue une adresse IP.
+ Mais là, on ne veut pas ça.
+ Là, on veut avoir une adresse IP fixe.
+ Donc on décoche.
+ Et là, on va rentrer.
+ L'adresse IP suivante, c'est 192.
+ 0.168.
+ Je crois que c'est 0.2.4.
+ Voilà.
+ Donc là, c'est l'adresse de votre PC.
+ Ou 0.2.1, vous jouez ici.
+ Bref.
+ Et donc là, votre PC, en fait, il est connecté à la base station sur cette adresse IP-là.
+ Donc là, vous quittez, vous sauvegardez et tout.
+ Donc là, c'est-à-dire que la prochaine fois que vous vous connectez à Internet, il faudra enlever cette adresse IP parce que sinon, ça ne marchera pas.
+ Donc on va vous connecter à la base station.
+ Et pour vous connecter au BlueBot, vous ouvrez une page web et vous tapez l'URL 192.68.2.2.
+ Et là, vous allez avoir l'interface du BlueBot qui va apparaître.
+ Donc ça, c'est grâce à la Navigator qui est à l'intérieur.
+ Voilà.
+ Bon.
+ Une fois qu'on est dessus, on va faire deux trucs.
+ Alors normalement, si tout s'est bien passé, il y a l'application web eDNA Contrôleur ou eDNA Manager, je ne sais plus, qui s'allume sur le côté.
+ Vous cliquez dessus.
+ Alors ça, c'est bon à savoir, mais pour savoir si elle marche, il faut regarder si le graphe évolue.
+ Si le graphe n'évolue pas, c'est qu'il y a un problème.
+ Toujours.
+ Ok.
+ Donc là, ce que vous allez faire, vous cliquez dessus, vous regardez.
+ Si ça ne marche pas, vous fermez la fenêtre.
+ Et vous allez dans le terminal.
+ Donc, arrivez dans le terminal.
+ Donc là, vous allez avoir une petite question.
+ Donc, c'est un terminal un peu bidon.
+ Et il va vous dire, est-ce que vous voulez taper RedPill ?
+ Et vous dites oui.
+ Donc là, vous tapez Red-Pill.
+ Vous faites entrer.
+ Et il va vous ramener vraiment sur le terminal de la Navigator.
+ Ok.
+ Et à ce niveau-là, il y a un script.
+ Si vous faites un LS, il y a un script qui s'appelle Reload Docker.
+ Un truc comme ça.
+ Et il va vous l'exécuter.
+ Vous faites .slash Reload Docker.
+ Et en fait, il va relancer e-DNA controller.
+ Donc, normalement, il va disparaître.
+ Et après, il va réapparaître.
+ Voilà.
+ Donc, vous faites ça.
+ Tac, tac, tac.
+ Et là, normalement, une fois qu'il a fait ça, en fait, le truc va disparaître, réapparaître.
+ Et vous cliquez dessus.
+ Et là, le DNA controller, il va réapparaître.
+ Et c'est parfait.
+ Donc, vous regardez le numéro de la pompe.
+ Vous connectez le bon mapping de bouton.
+ C'est important.
+ Parce qu'en fait, il y avait des petits offsets entre les deux pompes.
+ Donc, il faut connecter la bonne.
+ Sinon, la courbe ne sera pas bonne.
+ Et voilà.
+ Ensuite, une fois que c'est connecté.
+ Bon.
+ Comment faire ?
+ Donc, là, il y a plusieurs choses à savoir.
+ Donc, là, normalement, vous allez voir la courbe se lancer.
+ Je vous conseille, en fait, de pomper dans le vide, avant de mettre les filtres.
+ D'amorcer la pompe avec de l'eau.
+ Parce que, normalement, elle peut s'amorcer toute seule.
+ Elle a assez de puissance.
+ Et parfois, elle a un peu de mal.
+ Donc, je vous conseille de pomper dans l'eau.
+ Vous cliquez sur lancer la pompe.
+ Déjà, sur l'interface, qu'est-ce qu'il faut savoir ?
+ Il faut savoir que les petits ronds, à côté des graphiques,
+ correspondent aux boutons sur la pompe.
+ Donc, il sera toujours plus intéressant de cliquer sur ces petits ronds-là.
+ Parce que ces petits ronds-là, quand vous cliquez dessus,
+ ils effectuent vraiment une action sur la pompe.
+ Alors que quand vous cliquez sur lancer la pompe,
+ il y a un petit délai parce qu'il va exécuter plusieurs commandes
+ pour être sûr d'avoir lancé la pompe.
+ C'est un bouton de convenience, mais ce n'est pas vraiment...
+ Si vous voulez avoir quelque chose de fin,
+ je vous conseille de cliquer sur les petits boutons à côté de la pompe.
+ Vous regardez un petit peu comment...
+ Si vous passez votre série en survol, vous verrez à quoi ça correspond.
+ Mais par contre, vous n'avez pas de retour visuel.
+ Une fois que vous allez lancer la pompe, vous cliquez sur le petit bouton,
+ les graphiques vont commencer à décoller.
+ Et vous saurez que la pompe est amorcée quand le débit...
+ En fait, qu'est-ce qui va se passer ?
+ Le débit va baisser.
+ Par contre, la pression va monter.
+ Et une fois que la pompe sera amorcée,
+ la pression va descendre et le débit va se stabiliser.
+ Et là, vous saurez que la pompe est amorcée.
+ Mais tant que la pression reste haute
+ et que le débit ne monte pas,
+ ou ne se stabilise pas,
+ c'est que la pompe ne s'est pas amorcée et qu'il y a un problème.
+ C'est-à-dire qu'elle pompe de l'air, quelque part.
+ Alors, malheureusement,
+ si la pompe pompe à 1,4 litres tout le temps,
+ ou à 1,1 litres en continu,
+ le débit pompé, normalement, est le bon.
+ En revanche, si elle pompe à 0,3 litres par minute,
+ le débit pompé sera différent
+ entre ce qui est affiché sur le catamaran
+ et ce qui est affiché sur la boîte de la pompe.
+ Par exemple, si vous êtes à 0,3 litres par minute,
+ je vous conseille d'arrêter de pomper à 16 litres.
+ Après, c'est son feeling.
+ Mais je vous conseille d'arrêter de pomper à 16 litres.
+ Ça devrait faire 18 sur la pompe.
+ Au revoir aux alentours.

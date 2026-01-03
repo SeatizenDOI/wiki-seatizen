@@ -1,0 +1,156 @@
+ bon bah bonjour à tous je vais vous expliquer comment traiter une session plancha avec plancha
+ workflow donc comment traiter une session quand on revient d'une acquisition de données déjà il
+ faut extraire les données brutes donc la première donnée brute à extraire ça va être le gps de la
+ boule donc du riche rs 2 ou 3 ça dépend de la version laquelle vous avez et alors pour cela il faut
+ l'allumer et le riche en fait en fait le riche quand il s'allume il va d'abord chercher à se connecter à
+ un hotspot c'est à dire si vous avez mis votre téléphone en partage de connexion il va tenter
+ de se connecter et s'il n'y arrive pas au bout de quelques secondes il va se mettre lui-même en
+ hotspot et c'est à ce moment là qu'il faut se connecter à lui donc vous verrez où le moment
+ vous allez voir apparaître riche rs3 dans l'est mais moi aussi pas tout ici vous connectez le mot de
+ passe c'est toujours le m lead riche je vous invite à consulter la doc brunny de riche sur internet
+ gpt tu nous mettra lien ensuite ensuite une fois que vous êtes connecté à ce réseau vous connectez à la page
+ 192 points 168 points 42 points 1 donc ça c'est la page web vers laquelle on va récupérer donner
+ et vous allez dans l'onglet login login
+ là quand vous allez cliquer dessus normalement vous allez voir que il est toujours il est en train de
+ compresser la dernière acquisition parce que comme l'acquisition elle a dû faire deux ou trois heures
+ elle est assez grosse donc lui il va la compresse on passe au fichier zip vous attendez un petit peu et une
+ fois que c'est fini vous voulez télécharger et vous mettez ce de ce fichier zip vous le mettez dans
+ dans un dossier temporaire voilà ensuite maintenant on va extraire les fichiers bruts de la planche donc la
+ première chose à écrire ça va être les vidéos donc les vidéos sont dans la carte mémoire de la go pro
+ pas vous prévenez la carte mémoire vous la branchez sur l'ordinateur et vous récupérez tout le contenu qui est dans
+ sans go pro dans le dossier un dossier xp sans go pro soit c'est 101 soit c'est 102 600 et vous le copier vers
+ votre dossier temporaire et je vous conseille de faire dans votre dossier temporaire de faire un
+ sous dossier par exemple si la planche est jaune vous l'appelez jaune vous mettez toutes les vidéos de la planche jaune
+ dedans on mettrait tous les tous les fichiers gps de la planche jaune dedans et tous les fichiers de
+ l'autopilote dedans comme ça ça me fait une étape intermédiaire ça évitera de mélanger je vous conseille de
+ faire un copier vers plutôt qu'un déplacer parce qu'en fait si vous faites un déplacer et que je sais
+ pas parce que dans 99% des cas ça se passe bien mais dans 1% des cas il se peut que la carte sd soit
+ mal branché un faux contact une couille ainsi une couille vous êtes fichu si vous faites déplacer
+ vers parce que ça va corrompre vos fichiers alors que copier vers on a fait qu'une copie c'est pas
+ grave si ça corrompte pouvoir commencer après ça m'est déjà arrivé c'est pour ça que je le dis
+ alors sur gopro pour savoir quel fichier va et quel fichier en fait vous allez avoir par exemple pour une
+ session de filmage vous allez avoir plein de fichiers différents des mp4 des points mhv je crois et une
+ image et ben en fait si vous regardez le nom du fichier à la fin il ya deux chiffres donc 94 points
+ en fait c'est 94 points il regroupe toutes les vidéos d'un homme à toutes les vidéos du même une bonne
+ grande vidéo ce que gopro découpe ces vidéos par fichiers de cajiga voilà donc si vous avez fait trois
+ sessions de planche vous êtes censé avoir un truc qui se faire 94.95 points 96 points si un fichier fait
+ moins de seulement de 4 gigas c'est à dire fait un giga de gigueux dire que la session a duré cinq
+ minutes et c'est qu'il ya un problème c'est pas normal vous vous lancer la vidéo faut regarder là
+ vous avez là vous avez copié vos vidéos maintenant on va vouloir récupérer les fichiers gps de la
+ session des sessions donc là c'est la même manière vous aimez vous allumer la planche il ya un rich m2
+ sur la planche qui va s'allumer qui va chercher un hotspot donc il va pas le trouver et là il va
+ se il va se mettre en transport lui-même et donc là il faudra se connecter à lui c'est à dire
+ pareil bah rich m2 qui va apparaître dans votre mode wifi vous connecter avec le mot de passe et vous
+ allez à l'url 192.168.42 point 1 et vous mettez le mot de passe après vous avez la page login donc là
+ c'est différent normalement vous aurez bien trois fichiers zips si vous avez trop fait trois sessions
+ donc vous télécharger les trois fichiers zip et vous les mettez dans votre votre dossier temporaire
+ normalement le nom du fichier zip contient la date plus l'heure et normalement l'heure est à l'heure
+ utc donc si vous êtes à la réunion et que vous avez fait une session d'acquisition à 6 heures du
+ matin valeur utc c'est deux heures et quatre heures différences à bien savoir et enfin on va récupérer les fichiers
+ de l'autopilote alors où sont-ils eux ils sont sur la carte sd de l'autopilote donc dans la planche
+ vous allez voir un petit déport vous récupérez les cartes sd vous la branchez dans votre pc et vous
+ allez dans le log apm je crois et là vous allez avoir aussi à trois sessions il ya trois fichiers bin et
+ un fichier texte vous copiez ces fichiers bin et vous les mettez dans sur votre fichier dans votre dossier
+ temporaire voilà et ensuite vous supprimez ce qui reste dessus donc je vous conseille de supprimer
+ le fichier enfin les fichiers bin et le fichier last log contexte parce que lui contient le dernier
+ nombre et si vous le supprimez pas il va continuer à incrémenter la prochaine fois vous aurez 4 5 6 7 8 9
+ et ainsi de suite je vous conseille de supprimer comme ça la prochaine fois ça recommence à 1 c'est tout
+ nickel voilà donc maintenant que vous avez votre dossier temporaire on va passer on va répartir c'est
+ ces données brutes dans chaque session dans chaque dans chaque session pour cela on va copier les vidéos
+ on va créer déjà nos dossiers on va créer un dossier avec la bonne nomenclature par exemple
+ 2025 0406 dans ce corps réu tiré esthé tiré le underscore à sv tiré un underscore 0 1 voilà
+ et ensuite vous incrémentez 2 le dernier nombre de 1 0 2 0 3 là vous aurez vos
+ nom de dossiers pour trois sessions à l'intérieur vous créez un sous dossier d'essayer et vous mettez
+ vos vidéos vous créez un sous dossier gps et dans ce sous dossier gps vous mettez un sous dossier
+ base là vous copiez le fichier zip du riche m2 dans du riche rs3 pardon et ensuite vous
+ créez un sous dossier device et dedans vous mettez
+ le fichier gps de la planche et enfin vous créez un dossier sensor jusqu'où avec un s et vous mettez
+ le fichier pin de la planche là c'est bon vous avez réparti vos données vos données brutes au bon
+ endroit c'est tout nickel
+ bon
+ pour faire un suivi un petit peu plus pratique je vous conseille de d'avoir un fichier d'avoir un fichier
+ Excel à côté vous notez les sessions que vous avez réalisé je vous mettrais un exemple à côté aussi un exemple
+ et je vous conseille aussi d'avoir un autre fichier Excel qui va constituer comme ceci et dedans on a donc le nom de la
+ session l'heure indiquée sur la enième frame donc par exemple moi je vais vous expliquer après et ensuite d'autres petits paramètres qu'on va laisser à vide pour l'instant mais qui seront utiles pour la suite
+ alors comment plancher workflow se déroule on va en fait dans un premier temps
+ en fait dans un premier temps déjà la vidéo n'est pas synchronisée avec le gps et pour synchroniser avec la vidéo avec le gps en fait il faut savoir
+ l'heure à une frame donnée donc là nous on va découper notre vidéo en images à trois frames par seconde
+ c'est pas vraiment trois frames par seconde c'est plutôt 2997 sur mille
+ voilà parce qu'en fait on filme pas à 24 fps on filme plutôt à 23,2 je sais plus combien
+ je vous dirai après
+ donc voilà on applique donc une première fois python espace workflow.py
+ -csv et -os pour only split
+ et là en fait le code ne va découper que la première image que la première vidéo en images
+ et il va quand même effectuer le piquer le script sur le gps et la bati
+ donc là c'est la première passe
+ donc une fois que ça a fini d'exécuter
+ on va dans le dossier images on va aux alentours de la dixième ou de la vingtième frame
+ et si on voit l'heure du téléphone qui est affichée
+ on note ça dans notre fichier csv on note à laquelle frame on la voit apparaître et c'est parfait
+ ensuite on va dans le dossier gps device
+ on regarde un petit peu ce qui se passe par exemple ici on regarde si par exemple le ppk à combien de % il est en Q1
+ on regarde un petit peu si c'est logique bon voilà
+ et après on va dans bati
+ et là on regarde la répartition des points bati-pre-proc.png
+ et en fait ce fichier là il faut regarder si on n'a pas des valeurs aberrantes
+ ou si on n'a pas des valeurs qui sortent de la bati
+ parce que par exemple quand on déconnecte
+ en fait par exemple quand on fait l'acquisition de données et qu'on passe en mode manuel
+ et que la planche dérive et qu'elle sort du rectangle
+ ces points là ne seront pas filtrés par la suite
+ donc il faut les filtrer à la main
+ alors pour les filtrer à la main
+ si on voit qu'il y a des points qui sortent du carré de notre transect
+ du rectangle de notre transect
+ il faut absolument les enlever
+ donc on ouvre le fichier html
+ et on cherche
+ enfin hop c'est web map.html là
+ on ouvre
+ on cherche le point de début et le point de fin
+ et on note le time us
+ et ensuite on va noter ce time us
+ dans le fichier csv que j'ai nommé dessus
+ que j'ai nommé plus tôt
+ et voilà
+ une fois qu'on a fait ça
+ on enlève
+ on fait ça pour toutes les sessions
+ on enlève le
+ le tiret os
+ et on relance
+ donc là ça va prendre un petit peu plus de temps
+ parce qu'il va supprimer
+ enfin il va
+ il va redécouper toutes
+ il va redécouper toutes nos vidéos en images
+ il va refaire le gps refaire la bâtiment
+ il va aussi écrire de la métadonnée dans nos images
+ c'est à dire la position gps et la profondeur
+ voilà
+ donc une fois qu'il a fait ça
+ on peut vérifier son travail en prenant le fichier metadata.csv
+ et en le chargeant dans QGIS
+ si dans QGIS les points ont la tête d'un transect
+ qu'il n'y a pas de valeur aberrante qui sort
+ s'il n'y a pas un trait qui sort
+ et bien on peut continuer
+ s'il y a un trait qui sort
+ et bien là il faut noter l'heure du début de la frame qui sort
+ et l'heure de la frame qui rentre
+ et ensuite on relance au script pour les supprimer
+ c'est pareil
+ si dans le fichier de bâtiment préproc
+ on voit des valeurs de profondeur aberrante
+ et bien on note la valeur en positif aberrante
+ dans le fichier csv
+ minimum au maximum
+ comme ça on réduit en fait l'espace
+ depuis tout à l'heure en fait moi je vous parle d'un fichier csv
+ donc j'ai peut-être tu peux mettre ça au début
+ on dira que on peut soit utiliser un fichier csv pour lancer plusieurs sessions à la fois
+ ou alors sinon en fait le fichier csv sert à pré-remplir le fichier planchaconfig.json
+ mais si on n'a qu'une session effectuée en fait on utilise le fichier planchaconfig.json
+ et voilà
+ et voilà
+ et voilà
