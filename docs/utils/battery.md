@@ -33,6 +33,7 @@
 | Mode de charge    | LiPo             | **LiHV obligatoire**                    |
 
 ⚠️ **Ne jamais charger une LiPo en mode LiHV**
+
 ⚠️ **Ne jamais charger une LiHV en mode LiPo** (charge incomplète)
 
 ---
@@ -120,8 +121,11 @@ Une batterie 4S possède **toujours deux connexions**.
 ## 6. Sécurité pendant la charge
 
 ✅ Rester à proximité
+
 ✅ Vérifier que la batterie ne chauffe pas
+
 ❌ Ne jamais charger une batterie gonflée
+
 ❌ Ne jamais laisser une batterie en charge sans surveillance
 
 ---
@@ -149,8 +153,11 @@ Une batterie 4S possède **toujours deux connexions**.
 ## 9. Erreurs fréquentes à éviter
 
 ❌ Charger une LiHV en mode LiPo
+
 ❌ Oublier le câble d’équilibrage
+
 ❌ Charger à un courant excessif
+
 ❌ Charger sur une surface inflammable
 
 ---
