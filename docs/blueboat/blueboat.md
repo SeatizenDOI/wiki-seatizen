@@ -1,4 +1,4 @@
-# 🚤 Procédure : Démarrage et Utilisation du Catamaran Blue Boat
+# Blueboat
 
 Ce tutoriel explique la procédure complète de mise en marche du catamaran Blue Boat pour une opération de pompage, incluant la gestion des batteries et le dépannage de l'interface de contrôle.
 

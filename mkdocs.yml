@@ -1,11 +1,36 @@
 site_name: Seatizen WIKI
 repo_url: https://github.com/SeatizenDOI/wiki-seatizen
 
-# nav:
-#   - Home: ./index.md
-#   - Before session: ./before-session.md
-#   - After session: ./after-session.md
-#   - GCP: ./acquisition-gcp.md
+nav:
+  - Introduction: ./index.md
+
+  - Plancha:
+    - Avant une session: ./plancha/before-session.md
+    - Après une session: ./plancha/after-session.md
+
+  - Blueboat:
+    - Matériel: ./blueboat/blueboat.md
+
+  - Drone:
+    - Traitement d'une session: ./drone/traitement_session_drone.md
+
+  - Outils pour Zenodo:
+    - Introduction: ./zenodo/zenodo-tools.md
+    - Envoyer une session sur Zenodo: ./zenodo/zenodo-upload.md
+    - Télécharger une session depuis Zenodo: ./zenodo/zenodo-download.md
+    - Mettre à jour Seatizen Atlas: ./zenodo/zenodo-manager.md
+    - Mise à jour automatique de Seatizen Atlas: ./zenodo/zenodo-auto-update.md
+
+  - Tutoriels:
+    - Acquisition GCP: ./tutoriels/acquisition-gcp.md
+    - Gestion des batteries: ./tutoriels/battery.md
+    - Ajouter un raster sur cog-server: ./tutoriels/cog-server.md
+    - Déployer Seatizen monitoring: ./tutoriels/seatizen-monitoring.md
+
+  - Autres:
+    - Paramètres pour la photogrammetry: ./autres/photog.md
+    - Research log: ./autres/research-changelog.md 
 
 theme:
   name: readthedocs
+  navigation_depth: 1

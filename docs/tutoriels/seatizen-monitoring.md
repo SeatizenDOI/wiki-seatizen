@@ -1,4 +1,4 @@
-## 💻 Tutoriel : Déploiement de Seatizen Monitoring
+# 💻 Tutoriel : Déploiement de Seatizen Monitoring
 
 **Seatizen Monitoring** est une application web dédiée à la visualisation et au monitoring des données. Elle est basée sur une architecture *Frontend* / *Backend* et gérée via Docker Compose.
 

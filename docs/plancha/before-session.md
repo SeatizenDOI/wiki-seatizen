@@ -1,4 +1,4 @@
-# Préparation d'une session d'acquistion
+# Avant une session d'acquistion
 
 ## Conditions météo et heure d'acquisition
 

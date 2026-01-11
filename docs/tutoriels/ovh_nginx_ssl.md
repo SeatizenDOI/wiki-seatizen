@@ -1,14 +1,14 @@
-# NGINX Process to deploy app
+# Déployer un site sur OVH avec nginx
 
 
-## OVH conf 
+## Configuration sur OVH
 
 Sur le site OVH, il faut aller dans `WEB cloud`, `Nom de domaine`, `ifremer.re` puis `Zone DNS`.
 
 Ensuite, il faut `Ajouter une entrée`. On sélectionne le A puis, on renseigne le nom de sous domaine (Ex: seatizenmonitoring.ifremer.re).
 On laisse TTL par défaut, et en cible, on met l'adresse IP du serveur, la même qui est en face de `ifremer.re 0 A 51.91.102.139`
 
-## NGINX CONF
+## Configuration NGINX
 
 On va sur le VPS
 
@@ -39,7 +39,7 @@ On redémarre la conf :
 
 `sudo systemctl stop nginx` puis `sudo systemctl start nginx`. S'il y a un message rouge, faire `sudo systemctl status nginx` et corriger le problème.
 
-## SSL CONF
+## Ajouter un certificat SSL
 
 Pour activer le SSL, il faut juste exécuter la commande : `sudo certbot --nginx -d seatizenmonitoring.ifremer.re`
 

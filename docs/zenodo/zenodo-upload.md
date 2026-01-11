@@ -1,4 +1,4 @@
-## 🚀 Tutoriel Détaillé : Préparation et Envoi avec `zenodo-upload.py`
+# 🚀 Tutoriel Détaillé : Préparation et Envoi avec `zenodo-upload.py`
 
 Le script `zenodo-upload.py` du dépôt **Zenodo Tools** est conçu pour automatiser l'envoi d'une session Seatizen locale vers Zenodo. L'opération nécessite la préparation de plusieurs fichiers de métadonnées.
 
