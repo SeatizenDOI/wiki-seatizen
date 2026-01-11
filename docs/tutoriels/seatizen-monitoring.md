@@ -19,10 +19,10 @@ Le déploiement utilise quatre services conteneurisés :
 
 | Conteneur | Technologie | Rôle |
 | --- | --- | --- |
-| **`postgis`** | PostgreSQL | Héberge la base de données. |
-| **`sm-gdal`** | GDAL | **Outil d'Extraction :** Contient la bibliothèque GDAL, indispensable pour lire et extraire les données du Geopackage afin de les insérer dans la base PostGIS. |
-| **`backend`** | FastAPI (Python) | Fournit l'API pour servir les données du PostgreSQL au Frontend. |
-| **`frontend`** | Next.js | Interface utilisateur de l'application. |
+| **`sm_database`** | PostgreSQL | Héberge la base de données. |
+| **`sm_gdal`** | GDAL | **Outil d'Extraction :** Contient la bibliothèque GDAL, indispensable pour lire et extraire les données du Geopackage afin de les insérer dans la base PostGIS. |
+| **`sm_backend`** | FastAPI (Python) | Fournit l'API pour servir les données du PostgreSQL au Frontend. |
+| **`sm_frontend`** | Next.js | Interface utilisateur de l'application. |
 
 ### 🚀 Instructions de Démarrage
 
@@ -32,6 +32,8 @@ Le déploiement et la gestion de l'environnement se font intégralement via **Do
 | --- | --- | --- |
 | **Lancer** l'application | `docker compose up --build -d` | Démarre les quatre services en mode détaché (`-d`) après avoir reconstruit les images (`--build`). |
 | **Arrêter** l'application | `docker compose down -v` | Arrête et supprime les conteneurs, et surtout, supprime les **volumes (`-v`)** associés. |
+| **Surveiller** le démarrage de l'application | `docker logs -f sm_gdal` | surveille la transformation du geopackage en base de données. |
+
 
 > **⚠️ Point de Vigilance**
 > Pour éviter des problèmes au redémarrage (tels que des volumes orphelins ou des volumes montés non désirés), il est **impératif** d'utiliser la commande `docker compose down -v` lors de l'arrêt. L'option `-v` garantit la suppression propre des volumes créés par Docker.
