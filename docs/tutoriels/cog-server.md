@@ -1,5 +1,5 @@
 
-## 🗺️ Tutoriel : Intégration des Rasters (Orthophotos, Bathy, Prédictions)
+## Intégration des Rasters (Orthophotos, Bathy, Prédictions)
 
 L'ajout de données raster (Orthophotos, Bathy, Prédictions, etc.) à Seatizen Monitoring nécessite un traitement préalable des fichiers, car ils sont trop volumineux pour être servis directement. Ces rasters sont stockés sur un serveur dédié, séparé du site web principal.
 
@@ -21,7 +21,9 @@ Pour chaque catégorie de raster, un traitement est appliqué pour les rendre l�
 Avant d'exécuter les scripts, vous devez organiser vos données brutes dans une structure de dossiers spécifique.
 
 > **Structure du Dossier `data` :**
+
 > 1. Créez un dossier **`data`**.
+
 > 2. À l'intérieur de `data`, créez six sous-dossiers, un pour chaque catégorie de données :
 
 > * `bathy`
