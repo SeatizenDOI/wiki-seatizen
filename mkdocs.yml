@@ -26,6 +26,7 @@ nav:
     - Gestion des batteries: ./tutoriels/battery.md
     - Ajouter un raster sur cog-server: ./tutoriels/cog-server.md
     - Déployer Seatizen monitoring: ./tutoriels/seatizen-monitoring.md
+    - Déployer un site sur OVH avec nginx en SSL: ./tutoriels/ovh_nginx_ssl.md
 
   - Autres:
     - Paramètres pour la photogrammetry: ./autres/photog.md

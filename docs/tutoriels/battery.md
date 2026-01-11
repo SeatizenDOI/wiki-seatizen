@@ -1,232 +1,142 @@
-# 🔋 Charger une batterie **15,2 V – 4S**
+# 🔋 Guide Batteries LiPo et LiHV
 
-## Comprendre et utiliser correctement les batteries **LiPo** et **LiHV**
+Ce guide couvre la signification des désignations de batterie, les différences entre LiPo et LiHV, ainsi que les procédures de charge et de sécurité essentielles.
 
----
+## 1. Comprendre la tension (4S et 15,2 V)
 
-## 1. Signification de « 15,2 V – 4S »
+La désignation `4S` signifie que **4 cellules** sont montées en série.
 
-* **4S** signifie **4 cellules montées en série**
-* Tension **nominale par cellule** :
+| Type de Cellule | Tension Nominale (par cellule) | Tension Max (par cellule) | Tension Nominale **4S** | Tension Max **4S** |
+| --- | --- | --- | --- | --- |
+| **LiPo** | 3,7 V | 4,20 V | **14,8 V** (4  3,7 V) | 16,8 V |
+| **LiHV** (High Voltage) | 3,8 V | 4,35 V | **15,2 V** (4  3,8 V) | 17,4 V |
 
-  * **LiPo** : 3,7 V
-  * **LiHV** : 3,8 V
-
-### Tension nominale totale
-
-* **LiPo 4S** → 4 × 3,7 V = **14,8 V**
-* **LiHV 4S** → 4 × 3,8 V = **15,2 V**
-
-👉 **Une batterie 15,2 V est donc une batterie LiHV (High Voltage)**.
+> 👉 **Conclusion :** Une batterie marquée **15,2 V** est systématiquement une **LiHV**.
 
 ---
 
-## 2. Différences entre batteries **LiPo** et **LiHV**
+## 2. Différences clés et précautions de charge
 
-| Caractéristique   | LiPo             | LiHV                                    |
-| ----------------- | ---------------- | --------------------------------------- |
-| Tension nominale  | 3,7 V / cellule  | 3,8 V / cellule                         |
-| Tension maximale  | 4,20 V / cellule | 4,35 V / cellule                        |
-| Tension max en 4S | 16,8 V           | 17,4 V                                  |
-| Capacité utile    | Standard         | Légèrement supérieure                   |
-| Durée de vie      | Bonne            | Réduite si chargée à 4,35 V fréquemment |
-| Mode de charge    | LiPo             | **LiHV obligatoire**                    |
+| Caractéristique | LiPo | LiHV |
+| --- | --- | --- |
+| **Chargeur** | Mode LiPo | **Mode LiHV obligatoire** |
+| **Tension Max** | 4,20 V/cellule | **4,35 V/cellule** |
+| **Avantages** | Meilleure longévité, tension plus stable | Boost initial, capacité légèrement supérieure |
+| **Inconvénients** | Standard | Durée de vie réduite si chargée systématiquement à 4,35 V |
 
-⚠️ **Ne jamais charger une LiPo en mode LiHV**
+> ⚠️ **Avertissement de charge :**
 
-⚠️ **Ne jamais charger une LiHV en mode LiPo** (charge incomplète)
+> * **NE JAMAIS** charger une **LiPo** en mode **LiHV** (Risque d'incendie/explosion).
 
----
-
-## 3. Matériel nécessaire pour charger une LiHV 4S
-
-* ✔ Chargeur **LiPo/LiHV avec équilibrage**
-* ✔ Alimentation du chargeur (si nécessaire)
-* ✔ Câble principal (XT60, XT90, EC5, etc.)
-* ✔ Câble d’équilibrage **JST-XH (5 fils pour une 4S)**
-* ✔ Sac ignifugé LiPo (fortement recommandé)
+> * **NE JAMAIS** charger une **LiHV** en mode **LiPo** (Charge incomplète à seulement 16,8 V).
+> 
+> 
 
 ---
 
-## 4. Connecteurs d’une batterie 4S
+## 3. Éléments de la Batterie (Exemple 4S)
 
-Une batterie 4S possède **toujours deux connexions**.
+Chaque batterie 4S possède **deux connexions** distinctes, toutes deux nécessaires à la charge :
 
-### 4.1 Connecteur principal
+| Connexion | Rôle | Caractéristiques (Ex. 4S) |
+| --- | --- | --- |
+| **Principal** (Ex: XT60, XT90) | Passage de la puissance (Charge/Décharge) | 2 fils : + et − |
+| **Équilibrage** (JST-XH) | Surveillance de la tension de chaque cellule | **5 fils** (4 cellules + 1 fil commun) |
 
-* Permet le passage de la puissance
-* Utilisé pour la charge et la décharge
-* Exemples : XT60, XT90, EC5, Deans
 
-### 4.2 Connecteur d’équilibrage
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_XT60.webp" alt="Connecteur XT60">
+        <figcaption>Figure 1: Le connecteur XT60, utilisé pour la puissance.</figcaption>
+    </figure>
+</div>
 
-* Généralement de type **JST-XH**
-* **5 fils pour une 4S**
-* Permet au chargeur de surveiller chaque cellule
 
-👉 **Les deux connecteurs doivent être branchés pour une charge équilibrée et sûre**
-
----
-
-## 5. Procédure de charge (pas à pas)
-
-### Étape 1 : Installation
-
-* Poser la batterie sur une surface **non inflammable**
-* Idéalement dans un **sac LiPo**
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_JST_XH.jpeg" alt="Connecteur JST-XH 5 pin">
+        <figcaption>Figure 2: Le connecteur d'équilibrage **JST-XH 5 broches** pour une batterie 4S.</figcaption>
+    </figure>
+</div>
 
 ---
 
-### Étape 2 : Connexion du câble principal
+## 4. Procédure de Charge Sécuritaire
 
-* Brancher la batterie au câble de sortie du chargeur
-* Vérifier la polarité (+ / −)
+Le processus doit toujours se faire sous surveillance et sur une surface non inflammable (idéalement dans un sac LiPo ignifugé).
 
----
+### ⚙️ Réglages du Chargeur (pour une LiHV 4S)
 
-### Étape 3 : Connexion du câble d’équilibrage
+1. **Type de batterie** : `LiHV`
+2. **Nombre de cellules** : `4S`
+3. **Tension maximale** : `4,35 V / cellule` (17,4 V total)
+4. **Courant de charge** :
+* Règle standard : **1C** (Ex: 5000 mAh  **5,0 A**)
+* **Astuce longévité** : Charger à **0,5C** (Ex: 5000 mAh  **2,5 A**)
 
-* Brancher le connecteur JST-XH sur l’entrée **4S** du chargeur
-* Le détrompeur empêche une mauvaise orientation
 
-📌 **Ne jamais forcer un connecteur**
 
----
+### 🔌 Étapes de Connexion
 
-### Étape 4 : Réglages du chargeur
+1. Connecter le câble principal (puissance).
+2. Connecter le câble d'équilibrage JST-XH sur l'entrée `4S` du chargeur.
+> 📌 **Ne jamais forcer les connecteurs.**
 
-* **Type de batterie** : `LiHV`
-* **Nombre de cellules** : `4S`
-* **Tension maximale** : `4,35 V / cellule`
-* **Courant de charge** :
 
-  * Règle standard : **1C**
-  * Exemples :
+3. Vérifier que le chargeur détecte bien `4 cellules`.
+4. Lancer la charge et rester à proximité.
 
-    * 1500 mAh → **1,5 A**
-    * 5000 mAh → **5 A**
+### Fin de Charge
 
-👉 Charger à **0,5C** augmente la durée de vie de la batterie
-
----
-
-### Étape 5 : Lancement de la charge
-
-* Vérifier que le chargeur détecte bien **4 cellules**
-* Contrôler la tension individuelle des cellules
-* Démarrer la charge
+* Une LiHV 4S pleine doit atteindre **17,4 V** total.
+* L'écart entre les cellules doit être faible (0.1 V).
+* Débrancher toujours le **câble principal** en premier.
 
 ---
 
-## 6. Sécurité pendant la charge
+## 5. Stockage et Décharge
 
-✅ Rester à proximité
+### Stockage (Mode STORAGE)
 
-✅ Vérifier que la batterie ne chauffe pas
+Pour maximiser la durée de vie, les LiPo et LiHV doivent être stockées dans le mode **STORAGE** du chargeur, à une tension de :
 
-❌ Ne jamais charger une batterie gonflée
+* **3,80 V à 3,85 V par cellule**
 
-❌ Ne jamais laisser une batterie en charge sans surveillance
+### Courbe de Décharge (LiHV vs LiPo)
 
----
+* **LiPo :** Tension max 4,20 V. Plateau de tension plus long et stable.
+* **LiHV :** Tension max 4,35 V. Subit une **chute de tension rapide** en début de décharge.
 
-## 7. Fin de charge
-
-* Une **LiHV 4S pleine** atteint **17,4 V**
-* Les cellules doivent être équilibrées (écart ≤ ±0,02 V)
-* Débrancher dans l’ordre :
-
-  1. Câble principal
-  2. Câble d’équilibrage
+**Pourquoi cette chute rapide ?**
+La zone entre 4,20 V et 4,35 V n'est pas une zone de fonctionnement stable. Dès qu'un courant est demandé, la tension chute naturellement vers la zone stable de 4,1–4,2 V.
+**Une chute rapide après 30 secondes d'utilisation NE signifie PAS que la batterie est vide.**
 
 ---
 
-## 8. Stockage des batteries
+## 6. Sécurité et Erreurs à Éviter
 
-* LiPo et LiHV doivent être stockées à :
+| À Faire (Sécurité) | À Éviter (Erreurs Fréquentes) |
+| --- | --- |
+| ✅ Rester à proximité pendant la charge. | ❌ Oublier le câble d'équilibrage. |
+| ✅ Charger sur une surface non inflammable. | ❌ Charger sur un courant excessif. |
+| ✅ Utiliser le mode **STORAGE** pour le rangement. | ❌ Charger une LiHV en mode LiPo. |
+| ❌ Ne jamais charger une batterie gonflée. | ❌ Laisser une charge sans surveillance. |
 
-  * **3,80 à 3,85 V par cellule**
-* Utiliser le mode **STORAGE** du chargeur
+## Liens
 
----
 
-## 9. Erreurs fréquentes à éviter
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_chargeur.jpg" alt="Chargeur Gens Ace Imars Dual">
+        <figcaption>Figure 3: <a href="https://www.amazon.fr/Gens-Batterie-Balance-Chargeur-D%C3%A9chargeur/dp/B09SWS6YZK?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VXEVVCECIVJT&dib=eyJ2IjoiMSJ9.0n2GJwtoGJlRtcpccSP4CPeNkv2yXDK5YALRbrdQYmJu6vPSLqKR8Y2EbC_Qyuo-uYinpS4AMkcHodnozFOSIIredlc2m7xE_Ll6zIgDOOJOFP6g-GUJ_cgKGoISYgvPCyT8QbWt7kwqafe6TOUPnR6v7XxVgp16Hp0fC1VQA1DhmMSmwSRmzoFfdffDIofe5jlTA7LBxrdtRIjtBI-k5MHJFPXvUzwuKg4nJCdOCTT1MlL4JEA6qclkLW07hePlZu1bq7Fd6dR9iJ3YRjJjKlVj1LQL56GlYur8m5HQ5Y0.K8LuJfiQ3xm5SInthJpaFEpE3r8CcaIHeq3pPmkvLHk&dib_tag=se&keywords=chargeur%2Bgens%2Bace&qid=1768139738&sprefix=chargeur%2Blipo%2B4s%2Bgensace%2Caps%2C398&sr=8-7&th=1">Gens Ace Chargeur de Batterie Imars Dual</a></figcaption>
+    </figure>
+</div>
 
-❌ Charger une LiHV en mode LiPo
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_battery.webp" alt="Battery LiHV 4S">
+        <figcaption>Figure 3: <a href="https://www.powerhobby.com/products/gens-ace-advanced-g-tech-10000mah-15-2v-100c-4s2p-hardcase-lipo-battery-pack-61-with-ec5-plug?variant=51467570250050&country=AT&currency=EUR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic">Gens ace Advanced G-Tech 10000mAh</a></figcaption>
+    </figure>
+</div>
 
-❌ Oublier le câble d’équilibrage
-
-❌ Charger à un courant excessif
-
-❌ Charger sur une surface inflammable
-
----
-
-## 10. Courbe de décharge : LiPo vs LiHV
-
-### LiPo
-
-* Tension max : **4,20 V / cellule**
-* Plateau de tension stable
-* Décharge progressive
-
-### LiHV
-
-* Tension max : **4,35 V / cellule**
-* Sur-tension temporaire en fin de charge
-* Chute rapide initiale, puis plateau stable
-
-👉 La différence majeure se situe **au début de la décharge**
-
----
-
-## 11. Pourquoi une LiHV pleine chute rapidement en tension ?
-
-### Phénomène normal
-
-* La zone **4,20 → 4,35 V** n’est pas une zone de fonctionnement stable
-* Cette surtension existe :
-
-  * À vide
-  * Juste après la charge
-
-### Explication simplifiée
-
-* Densité ionique plus élevée
-* Résistance interne plus importante
-* Stabilité chimique réduite
-
-➡️ Dès qu’un courant est demandé :
-
-* La tension chute rapidement vers **4,1–4,2 V**
-* La capacité réelle reste disponible
-
----
-
-## 12. Exemple réel (LiHV 4S)
-
-| Situation                | Tension       |
-| ------------------------ | ------------- |
-| Fin de charge            | 17,4 V        |
-| Après 30 s d’utilisation | 16,6 – 16,8 V |
-| Régime stable            | 15,5 – 15,8 V |
-| Fin de décharge          | ~13,2 V       |
-
-👉 **Une chute rapide ≠ batterie vide**
-
----
-
-## 13. Comparaison à l’usage
-
-### LiPo
-
-* Tension plus stable
-* Meilleure longévité
-* Moins de stress chimique
-
-### LiHV
-
-* Boost initial
-* Légère capacité supplémentaire
-* Vieillit plus vite si chargée systématiquement à 4,35 V
 
