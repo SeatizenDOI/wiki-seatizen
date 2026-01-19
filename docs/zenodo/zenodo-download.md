@@ -4,7 +4,7 @@ Ce tutoriel explique comment extraire un sous-ensemble du jeu de données **Seat
 
 ## Extraction du sous-jeu de données
 
-![Exporter explanation](/img/zenodo/zd_exporter_explication.jpg)
+![Exporter explanation](../img/zenodo/zd_exporter_explication.jpg)
 
 La page **Explorer** se compose de trois parties principales :
 

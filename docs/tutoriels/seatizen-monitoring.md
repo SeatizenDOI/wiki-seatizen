@@ -32,7 +32,7 @@ Le déploiement et la gestion de l'environnement se font intégralement via **Do
 | --- | --- | --- |
 | **Lancer** l'application | `docker compose up --build -d` | Démarre les quatre services en mode détaché (`-d`) après avoir reconstruit les images (`--build`). |
 | **Arrêter** l'application | `docker compose down -v` | Arrête et supprime les conteneurs, et surtout, supprime les **volumes (`-v`)** associés. |
-| **Surveiller** le démarrage de l'application | `docker logs -f sm_gdal` | surveille la transformation du geopackage en base de données. |
+| **Surveiller** le démarrage de l'application | `docker logs -f sm_gdal` | Surveille la transformation du geopackage en base de données. |
 
 
 > **⚠️ Point de Vigilance**

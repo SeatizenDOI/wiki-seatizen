@@ -1,4 +1,4 @@
-# 🚀 Tutoriel Détaillé : Préparation et Envoi avec `zenodo-upload.py`
+# Préparation et Envoi avec `zenodo-upload.py`
 
 Le script `zenodo-upload.py` du dépôt **Zenodo Tools** est conçu pour automatiser l'envoi d'une session Seatizen locale vers Zenodo. L'opération nécessite la préparation de plusieurs fichiers de métadonnées.
 
@@ -8,18 +8,20 @@ Zenodo Upload est disponible sur le dépôt GitHub suivant : [https://github.com
 
 Pour commencer l'envoi, la session doit être présente **en local** et vous devez préparer deux fichiers CSV pour le suivi des métadonnées et des contributeurs.
 
-#### 1. Fichier de Suivi de Session (Session Tracking File)
+#### 1. Fichier de Suivi de Session (`suivi_session.csv`)
 
 Ce fichier CSV sert à définir les informations de base de chaque session à envoyer.
 
+Tous les champs que zenodo accepte sont ici https://developers.zenodo.org/#representation au niveau de `contributors`. 
 
-|session_name                |Creators      |DataManager|DataCollector|ProjectMember|
-|----------------------------|--------------|-----------|-------------|-------------|
-|20150611_REU-St-Gilles_scuba|PM, TB, MR, LM|VI         |             |             |
-|20150615_REU-La-Saline_scuba|PM, TB, MR, LM|VI         |             |             |
-|20150616_REU-La-Saline_scuba|PM, TB, MR, LM|VI         |             |             |
-|20150617_REU-St-Leu_scuba   |PM, TB, MR, LM|VI         |             |             |
-|20150619_REU-St-Gilles_scuba|PM, TB, MR, LM|VI         |             |             |
+```csv
+session_name,Creators,DataManager,DataCollector,ProjectMember
+20150611_REU-St-Gilles_scuba,"PM, TB, MR, LM",VI,,,
+20150615_REU-La-Saline_scuba,"PM, TB, MR, LM",VI,,,
+20150616_REU-La-Saline_scuba,"PM, TB, MR, LM",VI,,,
+20150617_REU-St-Leu_scuba   ,"PM, TB, MR, LM",VI,,,
+20150619_REU-St-Gilles_scuba,"PM, TB, MR, LM",VI,,,
+```
 
 
 **Exemple de structure [suivi_session.csv](https://raw.githubusercontent.com/SeatizenDOI/zenodo-tools/refs/heads/master/metadata/contributors/suivi_session.csv)** 
@@ -28,12 +30,12 @@ Ce fichier CSV sert à définir les informations de base de chaque session à en
 
 Ce fichier associe les initiales (utilisées dans le Fichier de Suivi) aux noms complets et aux affiliés des personnes. 
 
-
-|id                          |name          |affiliation|orcid              |
-|----------------------------|--------------|-----------|-------------------|
-|AB                          |Alexandre Boyer|UMR Marbec, IRD, La Réunion, France|0009-0002-2787-1044|
-|AJ                          |Alexis Joly   |INRIA Zenith, Montpellier, France|0000-0002-2161-9940|
-|AG                          |Andrea Goharzadeh|Ifremer DOI, La Réunion, France|                   |
+```csv
+id,name,affiliation,orcid
+AB,Alexandre Boyer,"UMR Marbec, IRD, La Réunion", France,0009-0002-2787-1044
+AJ,Alexis Joly,"INRIA Zenith, Montpellier, France",0000-0002-2161-9940
+AG,Andrea Goharzadeh,"Ifremer DOI, La Réunion, France",
+```
 
 
 **Exemple de structure [contributors.csv](https://raw.githubusercontent.com/SeatizenDOI/zenodo-tools/refs/heads/master/metadata/contributors/contributors.csv)** 
