@@ -9,7 +9,9 @@ nav:
     - Flux de traitement des données: ./plancha/after-session.md
 
   - Blueboat:
-    - Matériel: ./blueboat/blueboat.md
+    - Matériel: ./blueboat/materiel.md
+    - Données: ./blueboat/data.md
+
 
   - Drone:
     - Traitement d'une session: ./drone/traitement_session_drone.md
