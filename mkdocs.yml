@@ -5,8 +5,8 @@ nav:
   - Introduction: ./index.md
 
   - Plancha:
-    - Avant une session: ./plancha/before-session.md
-    - Après une session: ./plancha/after-session.md
+    - Guide de terrain: ./plancha/before-session.md
+    - Flux de traitement des données: ./plancha/after-session.md
 
   - Blueboat:
     - Matériel: ./blueboat/blueboat.md

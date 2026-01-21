@@ -10,10 +10,10 @@ Il est possible d'utiliser le logiciel [DB Browser for SQLite](https://sqlitebro
 Voici son diagramme UML :
 
 <div align="center">
-<figure>
-<img src="/img/zenodo/zm_uml.png" alt="UML de Seatizen Atlas">
-<figcaption>Figure 3 : UML de Seatizen Atlas</figcaption>
-</figure>
+    <figure>
+        <img src="/img/zenodo/zm_uml.png" alt="UML de Seatizen Atlas">
+        <figcaption>Figure 3 : UML de Seatizen Atlas</figcaption>
+    </figure>
 </div>
 
 Elle stocke les métadonnées des images (table `frame`), ainsi que l'ensemble des métadonnées des prédictions et des annotations multilabels (partie en jaune).
