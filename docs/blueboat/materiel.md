@@ -3,7 +3,19 @@
 
 Ce tutoriel détaille la procédure de mise en service du Blueboat pour des opérations de pompage d'ADN environnemental, incluant la gestion logicielle et le protocole de décontamination.
 
-<!-- TODO Image du blueboat -->
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/blueboat_1.jpg" alt="Blueboat.">
+        <figcaption>Blueboat.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/blueboat_2.jpg" alt="Blueboat.">
+        <figcaption>Blueboat.</figcaption>
+    </figure>
+</div>
 
 ## 1. Prérequis matériels
 
@@ -12,8 +24,17 @@ Pour une opération complète, assurez-vous de disposer des éléments suivants 
 * Catamaran Blueboat.
 * BaseStation (utiliser une canne/trépied pour augmenter la portée).
 * 4 batteries chargées (différence de tension maximale de **0.1V** entre elles).
-* Un ordinateur avec Google Chrome et QGroundControl.
+* Un ordinateur avec Google Chrome et QGroundControl + GPS emlid.
 * Une manette Xbox.
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/matos.jpg" alt="Matériel.">
+        <figcaption>Matériel.</figcaption>
+    </figure>
+</div>
+
+Le GPS emlid peut être intéressant lors du sortie sur le bateau pour avoir la position de l'ordinateur par rapport au point de pompage notamment pour le pilote du bateau.
 
 ## 2. Configuration réseau de l'ordinateur
 
@@ -23,14 +44,51 @@ La BaseStation agit comme un point d'accès Wi-Fi. Le Blueboat possède l'adress
 
 Par défaut, l'ordinateur utilise le protocole DHCP (adresse aléatoire). Il faut le désactiver pour forcer l'adresse :
 
-<!-- TODO SCREEN -->
-<!-- TODO SCREEN -->
-<!-- TODO SCREEN -->
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/reseau_wifi.png" alt="Wifi step 1">
+        <figcaption>Se connectez au réseau BaseStation.</figcaption>
+    </figure>
+</div>
 
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/wifi_options_adaptateur.png" alt="Wifi step 2">
+        <figcaption>Allez dans les paramètres et cliquez sur "Modifier les options d'adaptateur".</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/wifi_propriete.png" alt="Wifi step 3">
+        <figcaption>Faire un clique droit sur le réseau wifi et allez dans l'onglet "Propriétés" .</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/wifi_ipv4.png" alt="Wifi step 4">
+        <figcaption>Double cliquez "Protocole Internet version 4(TCP/IPv4)".</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/wifi_ipv4_2.png" alt="Wifi step ">
+        <figcaption>Changez les valeurs.</figcaption>
+    </figure>
+</div>
 
 > **Note :** Sans cette configuration, l'interface web peut fonctionner, mais le pilotage via QGroundControl sera impossible.
 
 > Documentation officielle : [BlueRobotics Software Setup](https://bluerobotics.com/learn/Blueboat-software-setup/)
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/qground_control_ready_to_fly.png" alt="QGroundControl.">
+        <figcaption>QGroundControl connecté avec le BlueBoat.</figcaption>
+    </figure>
+</div>
 
 ## 3. Mise en service du Blueboat
 
@@ -51,20 +109,61 @@ Tournez le bouton d'allumage jusqu'à la position maximale. Le système est prê
 
 L'application de gestion de la pompe est accessible via l'onglet `eDNA Controller` à gauche sur la page `192.168.2.2`.
 
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/blueos.png" alt="Blueos">
+        <figcaption>Interface Blueos du BlueBoat dans Chrome à l'url 192.168.2.2</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/parametre_pompe.png" alt="Paramètre">
+        <figcaption>Sélectionnez les paramètres.</figcaption>
+    </figure>
+</div>
+
+
 ### Dépannage de la connexion (Mode Pirate)
+
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/courbe_evolue_pas.png" alt="Courbe sans évolution.">
+        <figcaption>Interface sans réponse, les courbes n'évoluent pas.</figcaption>
+    </figure>
+</div>
 
 Si les courbes n'évoluent pas, il faut juste relancer l'application. Cela arrive souvent surtout si la connexion entre le blueboat et la basestation est instable (distance, grosse vague, ...) :
 
 1. Ouvrez l'application **Terminal** sur l'interface. L'application **Terminal** apparaît uniquement en mode pirate.
 
-<!-- TODO Image mode pirate -->
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/pirate_mode.png" alt="Pirate">
+        <figcaption>Activez le mode pirate.</figcaption>
+    </figure>
+</div>
 
 2. Tapez la commande `red-pill` pour accéder au système réel.
 3. Exécutez le script : `./reload_docker.sh`.
 
-<!-- TODO Screenshot terminal -->
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/terminal_restart.png" alt="Terminal">
+        <figcaption>Relancez le terminal.</figcaption>
+    </figure>
+</div>
+
 
 4. L'onglet **eDNA Controller** va redémarrer et la connexion devrait s'établir.
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/courbe_evolue.png" alt="Courbe avec évolution.">
+        <figcaption>L'application fonctionne.</figcaption>
+    </figure>
+</div>
 
 ### Pilotage et navigation
 
@@ -95,17 +194,17 @@ L'amorçage doit se faire idéalement à l'eau claire **sans filtres**. Surveill
 
 ### Phase 1 : Décontamination et Blanc
 
-1. **Désinfection :** Pomper 10L de Javel en circuit fermé.
+1. **Désinfection :** Pomper 10L de Javel à 2 % en circuit fermé.
 2. **Rincage :** Pomper 2L d'eau distillée en circuit ouvert.
-3. **Surfaces :** Nettoyer le matériel à la RNase ou à l'alcool.
-4. **Blanc :** Pomper 2L d'eau Milli-Q avec un filtre témoin. Sécher le filtre en pompant de l'air.
+3. **Surfaces :** Nettoyer le matériel à la Javel à 10 %, Ethanol à 70 % puis à l'eau MilliQ.
+4. **Blanc :** Pomper 2L d'eau Milli-Q avec un filtre témoin. Pomper de l'air afin d'effectuer une dessication du filtre.
 
 ### Phase 2 : Prélèvement des triplicats
 
-* **Réamorçage :** Toujours réamorcer à l'eau distillée avant d'installer les filtres.
+* **Réamorçage :** Toujours réamorcer la pompe à l'eau MilliQ avant d'installer les filtres.
 * **Installation :** Placer le triplicat de filtres. Par forte houle, immergez-les suffisamment pour éviter les prises d'air.
 * **Pompage :** Activer l'**Autostop** pour un arrêt automatique au volume cible.
-* **Séchage :** Une fois revenu au bord, pomper de l'air pour évacuer l'eau des filtres.
+* **Séchage :** Une fois revenu au bord, pomper de l'air pour dessiquer les filtres.
 
 ### Phase 3 : Fin de mission et entretien
 

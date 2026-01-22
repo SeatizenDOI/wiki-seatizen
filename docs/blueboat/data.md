@@ -23,7 +23,14 @@ Vous pouvez accéder aux logs directement depuis le système embarqué.
 ### Localisation des fichiers
 
 Les logs de l'application **eDNA Controller** sont stockés dans le système de fichiers de la carte Navigator.
-Le chemin d'accès dans le terminal est généralement : `/home/pi/logs/edna/`. <!-- Mettre le nom du dossier avec un screen. -->
+Le chemin d'accès dans le terminal est généralement : `/home/pi/logs/`.
+
+<div align="center">
+    <figure>
+        <img src="/img/blueboat/logs.png" alt="Logs">
+        <figcaption>Dossier avec les logs.</figcaption>
+    </figure>
+</div>
 
 ### Récupération via FileZilla (SFTP)
 
