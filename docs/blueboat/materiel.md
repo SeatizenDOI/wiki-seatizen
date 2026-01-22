@@ -112,3 +112,5 @@ L'amorçage doit se faire idéalement à l'eau claire **sans filtres**. Surveill
 1. **Rincage circuit :** Pomper de l'eau claire (distillée ou Milli-Q) pour rincer les tuyaux.
 2. **Rincage extérieur :** Rincer l'ensemble du Blueboat à l'eau douce.
 3. **Batteries :** Attendre que les coques soient parfaitement sèches avant de retirer les batteries.
+
+> Note: Il faut noter l'heure de chacune des opérations pour faire le lien avec les logs de la pompe.
