@@ -1,5 +1,6 @@
 site_name: Seatizen WIKI
 repo_url: https://github.com/SeatizenDOI/wiki-seatizen
+site_url: https://docs.ifremer.re
 
 nav:
   - Introduction: ./index.md
