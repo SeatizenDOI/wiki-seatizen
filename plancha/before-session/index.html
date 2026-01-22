@@ -130,7 +130,12 @@
 <li><strong>1 GoPro avec ses batteries</strong> : prévoir les batteries (1 par session), le caisson étanche et les outils de fixation.</li>
 <li><strong>Un Reach RS2/RS3</strong> (« bouboule ») qui fera office de base GPS, avec son trépied et un téléphone pour le partage de connexion.</li>
 </ul>
-<!-- TODO Image 1 -->
+<div align="center">
+    <figure>
+        <img src="/img/plancha/matos.jpg" alt="Matos">
+        <figcaption>Matériel.</figcaption>
+    </figure>
+</div>
 
 <p>Les gopros doivent être configurés comme ceci :</p>
 <div align="center">
@@ -237,31 +242,112 @@
 <ul>
 <li><strong>Brancher le boîtier de télémétrie</strong> et la <strong>manette Xbox</strong> à l'ordinateur.</li>
 <li>Lancer l'application <strong>Mission Planner</strong>.</li>
-<li><strong>Se connecter à la planche</strong> avec les paramètres suivants : ``. Une fois connectée, la planche doit apparaître sur la carte.  <!-- TODO Image 3 --></li>
+<li><strong>Se connecter à la planche</strong> avec les paramètres suivants : </li>
+</ul>
+<div align="center">
+    <figure>
+        <img src="/img/plancha/plancha_com_10.png" alt="COM">
+        <figcaption>Le port COM change à chaque fois mais souvent c'est celui en dessous des 3 Communications.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/connexion_en_cours.png" alt="Connexion">
+        <figcaption>Connexion en cours, chargement des paramètres de la planche.</figcaption>
+    </figure>
+</div>
+
+<p>Une fois connectée, la planche doit apparaître sur la carte.</p>
+<div align="center">
+    <figure>
+        <img src="/img/plancha/asv_on_map.png" alt="ASV on Map">
+        <figcaption>Apparition de la planche sur le carte. Ici à Ifremer au Port.</figcaption>
+    </figure>
+</div>
+
+<ul>
 <li><strong>Définir le "Home Point"</strong> sur la position actuelle de la planche pour éviter tout incident (RTL - Return to Launch).</li>
 </ul>
 <h4 id="creation-du-plan-de-vol-mission">Création du plan de vol (Mission)</h4>
 <ol>
-<li>Dans l'onglet <strong>Plan</strong>, dessiner un polygone : faire un clic droit sur la carte pour accéder au menu et placer 4 points pour former un rectangle. <!-- TODO Image 2 --></li>
+<li>Dans l'onglet <strong>Plan</strong>, dessiner un polygone : faire un clic droit sur la carte pour accéder au menu et placer 4 points pour former un rectangle. </li>
 <li>Une fois la forme satisfaisante, faire un clic droit -&gt; <strong>Auto-WP</strong> -&gt; <strong>Survey (Grid)</strong>. Une fenêtre contextuelle s'ouvre affichant le tracé (transect).</li>
 <li><strong>Vérifications :</strong></li>
 <li><strong>Vitesse :</strong> Vérifier que la vitesse est bien réglée sur <strong>1 m/s</strong> (panneau de droite).</li>
 <li><strong>Temps de mission :</strong> Vérifier la durée estimée en bas de l'écran. Elle doit être comprise entre <strong>50 min et 1h15</strong>. Au-delà, l'autonomie de la GoPro sera insuffisante.</li>
 <li><strong>Home Point :</strong> Si le temps estimé est anormalement élevé, vérifier que le point <strong>H</strong> (Home) est bien situé à côté de la planche.</li>
-<li>
-<p><strong>Type de tracé :</strong> Dans le deuxième onglet du menu, vous pouvez changer le type de transect (Cross Grid ou Linear).</p>
-</li>
-<li>
-<p>Si tout est correct, revenir sur le premier onglet et cliquer sur <strong>Accept</strong> (ou Valider). Un rectangle jaune apparaît sur la carte.</p>
-</li>
+<li><strong>Type de tracé :</strong> Dans le deuxième onglet du menu, vous pouvez changer le type de transect (Cross Grid ou Linear).</li>
+<li>Si tout est correct, revenir sur le premier onglet et cliquer sur <strong>Accept</strong> (ou Valider). Un rectangle jaune apparaît sur la carte.</li>
 </ol>
+<div align="center">
+    <figure>
+        <img src="/img/plancha/interface_1.png" alt="Step 0">
+        <figcaption>On place le Homepoint à côté de la session que l'on va dessiner.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/draw_polygon.png" alt="Step 1">
+        <figcaption>Clique droit sur la carte pour afficher la fenêtre.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/polygon_1.png" alt="Step 2">
+        <figcaption>Dessinez un polygon.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/survey_grid.png" alt="Step 3">
+        <figcaption>Clique droit sur la carte pour afficher la fenêtre.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/first_parameters.png" alt="Step 4">
+        <figcaption>On peut voir la vitesse de la planche et le temps d'acquisition.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/second_parameters.png" alt="Step 5">
+        <figcaption>On peut régler la forme du transect et si c'est bon on valide.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/survey_grid_2.png" alt="Step 6">
+        <figcaption>On obtient un transect.</figcaption>
+    </figure>
+</div>
+
 <h4 id="enregistrement-et-transfert">Enregistrement et transfert</h4>
 <ul>
 <li><strong>Sauvegarder localement :</strong> Cliquer sur <strong>Save</strong> pour enregistrer le fichier de waypoints par sécurité (Ex: <code>20251110_REU-ST-LEU_ASV-1_01.waypoints</code>).</li>
 <li><strong>Envoyer à la planche :</strong> Cliquer sur <strong>Write</strong> pour transférer les données vers la mémoire de la planche. Une fois le transfert terminé, la planche peut être mise à l'eau.</li>
 <li>Aller dans l'onglet <strong>Data</strong>, puis dans la fenêtre <strong>Actions</strong> pour activer la manette : <strong>Joystick &gt; Enable</strong>.</li>
 </ul>
-<!-- TODO Image 4 -->
+<div align="center">
+    <figure>
+        <img src="/img/plancha/save_survey.png" alt="Sauvegarde du transect.">
+        <figcaption>On sauvegarde le transect.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/write_on_asv.png" alt="On écrit le transect sur la planche.">
+        <figcaption>On envoie le transect sur la planche en cliquant sur Write.</figcaption>
+    </figure>
+</div>
 
 <hr />
 <h3 id="commandes-de-la-manette-xbox">Commandes de la manette (Xbox)</h3>
@@ -287,6 +373,20 @@
 </li>
 <li><strong>Bouton A :</strong> Mode <strong>Auto</strong> (La planche suit les waypoints enregistrés).</li>
 </ul>
+<div align="center">
+    <figure>
+        <img src="/img/plancha/joystick_1.png" alt="Joystick 1.">
+        <figcaption>On ouvre l'onglet Joystick.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/joystick_2.png" alt="Joystick 2.">
+        <figcaption>On active la manette.</figcaption>
+    </figure>
+</div>
+
 <hr />
 <h3 id="suivi-de-mission-et-fin-de-session">Suivi de mission et fin de session</h3>
 <p>Une fois la planche lancée, surveiller les indicateurs dans l'onglet <strong>Quick</strong> :</p>
@@ -294,7 +394,12 @@
 <li>Vérifier que l'<strong>échosondeur</strong> renvoie une valeur de profondeur.</li>
 <li>Vérifier que le <strong>GPS2</strong> affiche un statut <strong>3D Fix</strong> (ou mieux, RTK Fixed).</li>
 </ul>
-<!-- TODO Image 5 -->
+<div align="center">
+    <figure>
+        <img src="/img/plancha/quick.png" alt="Quick.">
+        <figcaption>On peut surveiller les valeurs de la planche. Ici on est à terre et dans un bureau donc le GPS2 n'est pas en 3DFix et l'echosondeur indique 0.12m.</figcaption>
+    </figure>
+</div>
 
 <p><strong>Important :</strong> À la fin de chaque mission, il est impératif d'éteindre, puis de rallumer la planche. Cela permet de séparer correctement les fichiers de log. Dans le cas contraire, les données de deux missions successives seront enregistrées dans le même fichier, compliquant le post-traitement.</p>
 <h2 id="entretien-de-la-planche">Entretien de la planche</h2>
@@ -329,6 +434,28 @@
 <blockquote>
 <p><strong>Note :</strong> Il est conseillé de ne pas modifier les fréquences d'usine sans une connaissance précise de la réglementation locale sur les bandes de fréquences (868 MHz en Europe / 915 MHz aux USA).</p>
 </blockquote>
+<div align="center">
+    <figure>
+        <img src="/img/plancha/rfd_tools.png" alt="RFD Tools.">
+        <figcaption>Exemple d'une connexion avec la planche jaune.</figcaption>
+    </figure>
+</div>
+
+<p><strong>Comment régler la vitesse de la planche ?</strong></p>
+<p>On peut la régler à 0.5m/s si on est dans le lagon pour faire de la photogrammétrie mais sinon, il faut la laisser à 1m/s en pente externe.</p>
+<div align="center">
+    <figure>
+        <img src="/img/plancha/asv_1ms.png" alt="Asv 1ms">
+        <figcaption>Paramètres de la planche pour avancer à 1 m/s.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/plancha/asv_05ms.png" alt="Asv 0.5ms">
+        <figcaption>Paramètres de la planche pour avancer à 0.5 m/s.</figcaption>
+    </figure>
+</div>
               
             </div>
           </div><footer>
