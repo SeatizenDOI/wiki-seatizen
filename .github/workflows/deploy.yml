@@ -3,7 +3,7 @@ name: Deploy MkDocs site
 on:
   push:
     branches:
-      - main   # ou master selon ton repo
+      - master
 
 permissions:
   contents: write
