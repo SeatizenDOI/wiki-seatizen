@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Ajouter un raster sur cog-server - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ajouter un raster sur cog-server";
+        var mkdocs_page_input_path = "tutoriels/cog-server.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../drone/traitement_session_drone/">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-download/">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../acquisition-gcp/">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../battery/">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seatizen-monitoring/">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ovh_nginx_ssl/">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriels</li>
+      <li class="breadcrumb-item active">Ajouter un raster sur cog-server</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/tutoriels/cog-server.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="integration-des-donnees-rasters-dans-seatizen-monitoring">Intégration des données rasters dans Seatizen Monitoring</h1>
+<p>L'intégration des données raster (Orthophotos, Bathymétrie, Prédictions, etc.) à la plateforme Seatizen Monitoring nécessite une optimisation préalable en raison de la taille importante des fichiers. Ces données sont servies par un serveur dédié, distinct du site web principal.</p>
+<h2 id="1-le-depot-cog-server">1. Le dépôt <code>cog-server</code></h2>
+<p>Tout le processus d'optimisation, de stockage et de service des rasters est géré par le dépôt <strong><code>cog-server</code></strong> : <a href="https://github.com/SeatizenDOI/cog-server">https://github.com/SeatizenDOI/cog-server</a>.</p>
+<p>Ce dépôt contient deux composantes essentielles :</p>
+<table>
+<thead>
+<tr>
+<th>Composante</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Le dossier tools</strong></td>
+<td>Contient les scripts Python pour convertir vos rasters bruts en format <strong>Cloud Optimized Geotiff (COG)</strong>.</td>
+</tr>
+<tr>
+<td><strong>Le serveur</strong></td>
+<td>L'application web qui sert les rasters COG optimisés, permettant une visualisation rapide sur la carte.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-preparation-et-organisation-des-fichiers-rasters">2. Préparation et organisation des fichiers rasters</h2>
+<h3 id="etape-1-optimisation-des-rasters">⚙️ Étape 1 : Optimisation des rasters</h3>
+<p>Avant le déploiement, vous devez traiter vos fichiers pour les rendre compatibles avec le serveur.</p>
+<p>Utilisez les scripts disponibles dans le dossier <code>cog-server/tools/</code>. Chaque sous-dossier (<code>bathy</code>, <code>ortho</code>, <code>pred_drone</code>, etc.) contient un <code>README.md</code> expliquant les étapes spécifiques pour optimiser les rasters de ce type.</p>
+<div align="center">
+<figure>
+<img src="/img/tutoriels/cog_tree.png" alt="Architecture du dossier tools">
+<figcaption>Architecture du dossier tools</figcaption>
+</figure>
+</div>
+
+<h3 id="etape-2-structure-du-dossier-de-donnees-data">📂 Étape 2 : Structure du dossier de données (<code>data</code>)</h3>
+<p>Une fois optimisés (ils devraient se terminer par <code>_cog.tif</code>), les fichiers doivent être stockés dans un dossier <code>data</code> en respectant la hiérarchie suivante (par type de données et par année) :</p>
+<pre><code class="language-bash">.
+├── bathy
+│   ├── 2022
+│   │   ├── bathy_group_9_color_cog.tif
+│   │   └── bathy_group_9_depth_cog.tif
+│   ├── 2023
+│   │   ├── bathy_group_9_color_cog.tif
+│   │   └── bathy_group_9_depth_cog.tif
+│   ├── 2024
+│   │   ├── bathy_group_5_color_cog.tif
+│   │   └── bathy_group_5_depth_cog.tif
+│   └── 2025
+│       ├── bathy_group_5_color_cog.tif
+│       └── bathy_group_5_depth_cog.tif
+├── ign
+│   ├── 2017
+│   │   └── 974-2017-0340-7640-U40S-0M20-E080_clipped_cog.tif
+│   └── 2022
+│       └── 974-2022-0340-7640-U40S-0M20-E080_clipped_cog.tif
+├── ortho
+│   ├── 2021
+│   │   └── 20211202_REU-BOUCAN_AUV-1_01_ortho_cog.tif
+│   ├── 2022
+│   │   └── 20221025_SYC-aldabra-arm01_UAV-02_33_ortho_cog.tif
+│   ├── 2023
+│   │   └── 2023_ASV_AME_STLEU_odm_orthophoto_cog.tif
+│   ├── 2024
+│   │   └── 20240628_REU-HERMITAGE_ASV-1_01_ortho_cog.tif
+│   └── 2025
+│       └── 2025_ASV_AME_STLEU_odm_orthophoto_cog.tif
+├── pred_asv
+│   ├── 2022
+│   │   ├── group_2022_ACROPORE_BRANCHED_0_colored_cog.tif
+│   │   └── group_2022_THALASSODENDRON_CILIATUM_9_colored_cog.tif
+│   ├── 2023
+│   │   └── group_2023_THALASSODENDRON_CILIATUM_9_colored_cog.tif
+│   ├── 2024
+│   │   └── group_2024_THALASSODENDRON_CILIATUM_6_colored_cog.tif
+│   ├── 2025
+│   │   └── group_2025_THALASSODENDRON_CILIATUM_6_colored_cog.tif
+│   └── color_asv_pred_by_specie.json
+├── pred_drone
+│   ├── 2023
+│   │   ├── 20231208_REU-ST-LEU_UAV-01_06_ortho_merged_predictions_color_cog.tif
+│   │   └── 20231208_REU-ST-LEU_UAV-01_06_ortho_merged_predictions_preddata_cog.tif
+│   ├── 2024
+│   │   ├── 20240407_REU-ST-LEU-PORT_UAV-01_03_ortho_merged_predictions_color_cog.tif
+│   │   └── 20240407_REU-ST-LEU-PORT_UAV-01_03_ortho_merged_predictions_preddata_cog.tif
+│   └── 2025
+│       ├── 20250517_REU-LA-SALINE_UAV-01_01_ortho_merged_predictions_color_cog.tif
+│       └── 20250517_REU-LA-SALINE_UAV-01_01_ortho_merged_predictions_preddata_cog.tif
+├── pred_ign
+│   ├── 2017
+│   │   ├── 974-2017-0340-7640-U40S-0M20-E080_merged_predictions_color_cog.tif
+│   │   └── 974-2017-0340-7640-U40S-0M20-E080_merged_predictions_preddata_cog.tif
+│   └── 2022
+│       ├── 974-2022-0310-7670-U40S-0M20-E080_merged_predictions_color_cog.tif
+│       └── 974-2022-0310-7670-U40S-0M20-E080_merged_predictions_preddata_cog.tif
+└── transparent.png
+
+</code></pre>
+<h3 id="gestion-des-doubles-fichiers-bathy-predictions">🎨 Gestion des doubles fichiers (Bathy, Prédictions)</h3>
+<p>Les catégories <strong><code>bathy</code></strong>, <strong><code>pred_drone</code></strong> et <strong><code>pred_ign</code></strong> requièrent deux fichiers COG par raster pour séparer la visualisation de la donnée :</p>
+<table>
+<thead>
+<tr>
+<th>Type de Fichier</th>
+<th>Rôle</th>
+<th>Objectif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>*_color_cog.tif</code></strong></td>
+<td>Couche visuelle</td>
+<td>Sert uniquement à afficher les couleurs sur la carte.</td>
+</tr>
+<tr>
+<td><strong><code>*_preddata_cog.tif</code></strong></td>
+<td>Couche de données</td>
+<td>Contient les valeurs du raster (profondeur, labels de prédiction, etc.), permettant à l'utilisateur de <strong>cliquer</strong> sur la carte pour obtenir une information précise.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-deploiement-et-mise-a-jour-du-serveur">3. Déploiement et mise à jour du serveur</h2>
+<p>Le déploiement et la configuration complète du serveur sont détaillés dans le <code>README.md</code> du dépôt principal <code>cog-server</code>.</p>
+<p>🔗 <strong>Lien du tutoriel de déploiement :</strong> <a href="https://github.com/SeatizenDOI/cog-server/blob/master/README.md">https://github.com/SeatizenDOI/cog-server/blob/master/README.md</a></p>
+<h3 id="mise-a-jour-des-donnees-sur-le-vps">🚀 Mise à jour des données sur le VPS</h3>
+<p>Pour mettre à jour les données sur le serveur VPS (celui de Sylvain) après l'optimisation :</p>
+<ol>
+<li><strong>Connexion :</strong> Utilisez un client FTP/SFTP comme <strong>FileZilla</strong> pour vous connecter au VPS.</li>
+<li><strong>Transfert :</strong> Transférez le contenu de votre nouveau dossier <code>data</code> (contenant les sous-dossiers <code>bathy</code>, <code>ortho</code>, etc.) vers le répertoire de données du serveur :
+<code>/home/debian/villien/data</code></li>
+<li><strong>Redémarrage :</strong> Relancez le conteneur Docker pour qu'il prenne en compte les nouveaux fichiers. Utilisez la commande suivante via SSH : <code>docker container restart cog-server</code></li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../battery/" class="btn btn-neutral float-left" title="Gestion des batteries"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../seatizen-monitoring/" class="btn btn-neutral float-right" title="Déployer Seatizen monitoring">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../battery/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../seatizen-monitoring/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

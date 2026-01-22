@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Déployer un site OVH - NGINX - SSL - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "D\u00e9ployer un site OVH - NGINX - SSL";
+        var mkdocs_page_input_path = "tutoriels/ovh_nginx_ssl.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../drone/traitement_session_drone/">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-download/">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../acquisition-gcp/">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../battery/">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cog-server/">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seatizen-monitoring/">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriels</li>
+      <li class="breadcrumb-item active">Déployer un site OVH - NGINX - SSL</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/tutoriels/ovh_nginx_ssl.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="deployer-un-site-sur-ovh-avec-nginx">Déployer un site sur OVH avec nginx</h1>
+<h2 id="configuration-sur-ovh">Configuration sur OVH</h2>
+<p>Sur le site OVH, il faut aller dans <code>WEB cloud</code>, <code>Nom de domaine</code>, <code>ifremer.re</code> puis <code>Zone DNS</code>.</p>
+<p>Ensuite, il faut <code>Ajouter une entrée</code>. On sélectionne le A puis, on renseigne le nom de sous domaine (Ex: seatizenmonitoring.ifremer.re).
+On laisse TTL par défaut, et en cible, on met l'adresse IP du serveur, la même qui est en face de <code>ifremer.re 0 A 51.91.102.139</code></p>
+<h2 id="configuration-nginx">Configuration NGINX</h2>
+<p>On va sur le VPS</p>
+<p>On crée un fichier et on l'édite : <code>sudo nano /etc/nginx/sites-availables/seatizenmonitoring</code></p>
+<p>Dedans on met :</p>
+<pre><code>server {
+    listen 80;
+    server_name seatizenmonitoring.ifremer.re;
+
+    location / {
+        proxy_pass http://localhost:3000; # Le port où tourne ton app
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+</code></pre>
+<p>On link le fichier <code>sudo ln -s /etc/nginx/sites-available/seatizenmonitoring /etc/nginx/sites-enabled/</code></p>
+<p>On redémarre la conf :</p>
+<p><code>sudo systemctl stop nginx</code> puis <code>sudo systemctl start nginx</code>. S'il y a un message rouge, faire <code>sudo systemctl status nginx</code> et corriger le problème.</p>
+<h2 id="ajouter-un-certificat-ssl">Ajouter un certificat SSL</h2>
+<p>Pour activer le SSL, il faut juste exécuter la commande : <code>sudo certbot --nginx -d seatizenmonitoring.ifremer.re</code></p>
+<p>Maintenant le site est en https et les requêtes http sont redirigés vers le https. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../seatizen-monitoring/" class="btn btn-neutral float-left" title="Déployer Seatizen monitoring"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../autres/photog/" class="btn btn-neutral float-right" title="Paramètres pour la photogrammetrie">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../seatizen-monitoring/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../autres/photog/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

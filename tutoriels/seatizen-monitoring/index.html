@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Déployer Seatizen monitoring - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "D\u00e9ployer Seatizen monitoring";
+        var mkdocs_page_input_path = "tutoriels/seatizen-monitoring.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../drone/traitement_session_drone/">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-download/">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../acquisition-gcp/">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../battery/">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cog-server/">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ovh_nginx_ssl/">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriels</li>
+      <li class="breadcrumb-item active">Déployer Seatizen monitoring</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/tutoriels/seatizen-monitoring.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tutoriel-deploiement-de-seatizen-monitoring">💻 Tutoriel : Déploiement de Seatizen Monitoring</h1>
+<p><strong>Seatizen Monitoring</strong> est une application web dédiée à la visualisation et au monitoring des données. Elle est basée sur une architecture <em>Frontend</em> / <em>Backend</em> et gérée via Docker Compose.</p>
+<ul>
+<li><strong>Dépôt GitHub :</strong> <a href="https://www.google.com/search?q=https://github.com/SeatizenDOI/seatizen-monitoring">github.com/SeatizenDOI/seatizen-monitoring</a></li>
+</ul>
+<h3 id="architecture-technique-detaillee">🌐 Architecture Technique Détaillée</h3>
+<p>L'application repose sur quatre conteneurs Docker pour assurer la gestion complète des données, de la source à l'interface utilisateur :</p>
+<h4 id="1-flux-des-donnees">1. Flux des Données</h4>
+<ol>
+<li><strong>Source :</strong> Les données proviennent d'un <strong>Geopackage</strong> (<code>.gpkg</code>), un format de base de données SQLite optimisé pour les données géospatiales, téléchargé depuis Zenodo.</li>
+<li><strong>Base de Données :</strong> Bien que les données sources soient un Geopackage, elles sont chargées dans une base <strong>PostgreSQL (PostGIS)</strong>. Ce transfert est crucial pour des raisons de <strong>performance</strong> et de rapidité d'exécution des requêtes de l'application web.</li>
+</ol>
+<h4 id="2-les-conteneurs-docker">2. Les Conteneurs Docker</h4>
+<p>Le déploiement utilise quatre services conteneurisés :</p>
+<table>
+<thead>
+<tr>
+<th>Conteneur</th>
+<th>Technologie</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>sm_database</code></strong></td>
+<td>PostgreSQL</td>
+<td>Héberge la base de données.</td>
+</tr>
+<tr>
+<td><strong><code>sm_gdal</code></strong></td>
+<td>GDAL</td>
+<td><strong>Outil d'Extraction :</strong> Contient la bibliothèque GDAL, indispensable pour lire et extraire les données du Geopackage afin de les insérer dans la base PostGIS.</td>
+</tr>
+<tr>
+<td><strong><code>sm_backend</code></strong></td>
+<td>FastAPI (Python)</td>
+<td>Fournit l'API pour servir les données du PostgreSQL au Frontend.</td>
+</tr>
+<tr>
+<td><strong><code>sm_frontend</code></strong></td>
+<td>Next.js</td>
+<td>Interface utilisateur de l'application.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instructions-de-demarrage">🚀 Instructions de Démarrage</h3>
+<p>Le déploiement et la gestion de l'environnement se font intégralement via <strong>Docker Compose</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Commande</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lancer</strong> l'application</td>
+<td><code>docker compose up --build -d</code></td>
+<td>Démarre les quatre services en mode détaché (<code>-d</code>) après avoir reconstruit les images (<code>--build</code>).</td>
+</tr>
+<tr>
+<td><strong>Arrêter</strong> l'application</td>
+<td><code>docker compose down -v</code></td>
+<td>Arrête et supprime les conteneurs, et surtout, supprime les <strong>volumes (<code>-v</code>)</strong> associés.</td>
+</tr>
+<tr>
+<td><strong>Surveiller</strong> le démarrage de l'application</td>
+<td><code>docker logs -f sm_gdal</code></td>
+<td>Surveille la transformation du geopackage en base de données.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>⚠️ Point de Vigilance</strong>
+Pour éviter des problèmes au redémarrage (tels que des volumes orphelins ou des volumes montés non désirés), il est <strong>impératif</strong> d'utiliser la commande <code>docker compose down -v</code> lors de l'arrêt. L'option <code>-v</code> garantit la suppression propre des volumes créés par Docker.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cog-server/" class="btn btn-neutral float-left" title="Ajouter un raster sur cog-server"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ovh_nginx_ssl/" class="btn btn-neutral float-right" title="Déployer un site OVH - NGINX - SSL">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../cog-server/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ovh_nginx_ssl/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

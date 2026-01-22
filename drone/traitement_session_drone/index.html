@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Traitement d'une session - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Traitement d\u0027une session";
+        var mkdocs_page_input_path = "drone/traitement_session_drone.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-download/">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/acquisition-gcp/">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/battery/">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/cog-server/">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/seatizen-monitoring/">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/ovh_nginx_ssl/">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Drone</li>
+      <li class="breadcrumb-item active">Traitement d'une session</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/drone/traitement_session_drone.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="traitement-dune-session-drone">Traitement d’une session drone</h1>
+<h2 id="ce-tutoriel-decrit-le-workflow-complet-de-traitement-dune-session-drone-depuis-la-recuperation-des-images-brutes-jusqua-la-preparation-finale-des-donnees-pour-un-depot-sur-zenodo-en-sappuyant-sur-les-outils-developpes-dans-le-cadre-du-projet-seatizen">Ce tutoriel décrit le <strong>workflow complet de traitement d’une session drone</strong>, depuis la récupération des images brutes jusqu’à la préparation finale des données pour un dépôt sur <strong>Zenodo</strong>, en s’appuyant sur les outils développés dans le cadre du projet <strong>Seatizen</strong>.</h2>
+<h2 id="1-recuperation-des-donnees-du-drone">1. Récupération des données du drone</h2>
+<p>La première étape consiste à <strong>extraire les images depuis la carte mémoire du drone</strong>.</p>
+<p>⚠️ <strong>Contraintes importantes :</strong></p>
+<ul>
+<li>Les <strong>vidéos ne sont pas utilisables</strong> dans ce workflow.</li>
+<li>Les vidéos ne permettent pas de récupérer des métadonnées GPS exploitables.</li>
+<li>Il est indispensable de travailler avec <strong>des images contenant des métadonnées GPS (EXIF)</strong>.</li>
+</ul>
+<hr />
+<h2 id="2-organisation-des-images-dossier-dcim">2. Organisation des images (dossier <code>DCIM</code>)</h2>
+<p>Toutes les images doivent être regroupées dans un dossier nommé :</p>
+<pre><code>DCIM/
+</code></pre>
+<h3 id="points-de-vigilance">Points de vigilance</h3>
+<ul>
+<li>Certains drones répartissent les images dans <strong>plusieurs sous-dossiers</strong>.</li>
+<li>Il peut exister <strong>des images avec le même nom</strong>.</li>
+<li>Si toutes les images sont copiées dans un seul dossier sans renommage, <strong>elles risquent de s’écraser</strong>.</li>
+</ul>
+<p>👉 Avant de poursuivre :</p>
+<ul>
+<li>Vérifiez les doublons,</li>
+<li>Renommez les fichiers si nécessaire.</li>
+</ul>
+<hr />
+<h2 id="3-production-de-lorthophoto-avec-opendronemap-odm">3. Production de l’orthophoto avec OpenDroneMap (ODM)</h2>
+<p>L’orthophoto est un <strong>élément central du workflow</strong>, notamment pour les étapes d’intelligence artificielle.</p>
+<p>Nous recommandons donc d’exécuter <strong>OpenDroneMap (ODM)</strong> en premier.</p>
+<h3 id="parametres-odm-utilises">Paramètres ODM utilisés</h3>
+<p>Voici les paramètres OpenDroneMap utilisés dans notre workflow :</p>
+<pre><code class="language-bash">--project-path /datasets/code/PROCESSED_DATA/PHOTOGRAMMETRY \
+--auto-boundary \
+--cog \
+--orthophoto-resolution 1.0 \
+--rolling-shutter \
+--use-exif \
+--max-concurrency 128 \
+--fast-orthophoto \
+--optimize-disk-space \
+--feature-quality ultra
+</code></pre>
+<p>Ces paramètres permettent notamment :</p>
+<ul>
+<li>l’utilisation des métadonnées EXIF,</li>
+<li>la génération d’une <strong>orthophoto optimisée (COG)</strong>,</li>
+<li>une résolution de 1 m,</li>
+<li>une optimisation des performances et de l’espace disque,</li>
+<li>une qualité élevée pour la détection des points caractéristiques.</li>
+</ul>
+<hr />
+<h2 id="4-execution-dodm-sur-datarmor-script-pbs">4. Exécution d’ODM sur Datarmor (script PBS)</h2>
+<p>Dans notre cas d’usage, les calculs sont effectués sur le <strong>cluster Datarmor</strong>.</p>
+<h3 id="transfert-des-donnees">Transfert des données</h3>
+<ul>
+<li>Les données sont envoyées sur Datarmor via <strong>FileZilla</strong> (ou équivalent).</li>
+<li>Une fois les données disponibles sur le cluster, ODM est lancé via un <strong>script PBS</strong>.</li>
+</ul>
+<h3 id="script-pbs-odm">Script PBS ODM</h3>
+<p>Le script PBS utilisé est disponible ici :</p>
+<p>👉 <strong>Script ODM Datarmor</strong>
+<a href="https://github.com/SeatizenDOI/datarmor-pbs/blob/master/odm/drone/drone_serge_may2025.pbs">https://github.com/SeatizenDOI/datarmor-pbs/blob/master/odm/drone/drone_serge_may2025.pbs</a></p>
+<p>Ce script :</p>
+<ul>
+<li>configure l’environnement Datarmor,</li>
+<li>lance OpenDroneMap avec les paramètres adaptés,</li>
+<li>gère l’exécution sur les nœuds de calcul du cluster.</li>
+</ul>
+<hr />
+<h2 id="5-workflow-dextraction-des-metadonnees">5. Workflow d’extraction des métadonnées</h2>
+<p>Une fois l’orthophoto générée, nous appliquons le workflow <strong>drone-workflow</strong> afin d’extraire et structurer les métadonnées des images.</p>
+<h3 id="commande-datarmor">Commande Datarmor</h3>
+<pre><code class="language-bash">echo &quot;Working with ${SESSION_PATH}&quot;
+
+singularity run \
+  --pwd /home/seatizen/app/ \
+  --bind ${PATH_DRONE_FOLDER}:/home/seatizen/sessions \
+  drone_workflow.sif \
+  -efol \
+  -pfol /home/seatizen/sessions \
+  -c \
+  -ip ${PBS_ARRAY_INDEX}
+</code></pre>
+<p>Ce workflow permet de :</p>
+<ul>
+<li>lire les images et leurs métadonnées GPS,</li>
+<li>structurer les informations de session,</li>
+<li>préparer les fichiers nécessaires aux étapes suivantes.</li>
+</ul>
+<hr />
+<h2 id="6-inference-automatique-sur-les-images">6. Inférence automatique sur les images</h2>
+<p>Une première étape d’inférence est ensuite réalisée à l’aide du conteneur <strong>drone-inference</strong>.</p>
+<h3 id="commande-datarmor_1">Commande Datarmor</h3>
+<pre><code class="language-bash">singularity run --nv \
+  --pwd /home/seatizen/app/ \
+  --bind /home1/datawork/villien/models:/home/seatizen/app/models \
+  --bind ${PATH_DRONE_FOLDER}:/home/seatizen/sessions \
+  --bind /home1/scratch/villien/:/tmp/ \
+  drone_inference.sif \
+  -efol \
+  -pfol /home/seatizen/sessions \
+  -c \
+  -ip ${PBS_ARRAY_INDEX}
+</code></pre>
+<p>Cette étape permet :</p>
+<ul>
+<li>d’exploiter les modèles pré-entraînés,</li>
+<li>d’appliquer une première analyse automatique sur les images,</li>
+<li>de produire des sorties intermédiaires pour la segmentation finale.</li>
+</ul>
+<hr />
+<h2 id="7-segmentation-avec-the-point-is-the-mask">7. Segmentation avec <em>The Point Is The Mask</em></h2>
+<p>La segmentation fine est réalisée avec l’outil <strong>The Point Is The Mask</strong>, basé sur une intelligence artificielle de segmentation.</p>
+<h3 id="activation-de-lenvironnement-conda">Activation de l’environnement Conda</h3>
+<pre><code class="language-bash">cd /home1/datahome/villien/project_hub/the-point-is-the-mask
+
+. /appli/anaconda/latest/etc/profile.d/conda.sh
+conda activate /home1/datawork/villien/conda-env/segment_env
+</code></pre>
+<h3 id="lancement-de-linference-de-segmentation">Lancement de l’inférence de segmentation</h3>
+<pre><code class="language-bash">python3 inference.py \
+  -eses \
+  -pses ${SESSION_PATH} \
+  -po /home1/scratch/villien/drone_uav_tmp \
+  -psm ./models/SegForCoral-b2-2025_06_30_19127-bs16_refine \
+  --is_seatizen_session
+</code></pre>
+<p>Cette étape :</p>
+<ul>
+<li>segmente l’orthophoto,</li>
+<li>réalise des prédictions sur <strong>5 classes</strong>,</li>
+<li>génère des masques exploitables pour l’analyse et l’annotation.</li>
+</ul>
+<hr />
+<h2 id="8-depots-github-a-consulter">8. Dépôts GitHub à consulter</h2>
+<p>Pour comprendre et adapter chaque étape du workflow, nous vous invitons à consulter les dépôts suivants :</p>
+<ul>
+<li>
+<p><strong>Drone workflow (métadonnées)</strong>
+  <a href="https://github.com/SeatizenDOI/drone-workflow">https://github.com/SeatizenDOI/drone-workflow</a></p>
+</li>
+<li>
+<p><strong>Drone inference</strong>
+  <a href="https://github.com/SeatizenDOI/drone-inference">https://github.com/SeatizenDOI/drone-inference</a></p>
+</li>
+<li>
+<p><strong>The Point Is The Mask (segmentation)</strong>
+  <a href="https://github.com/SeatizenDOI/the-point-is-the-mask/">https://github.com/SeatizenDOI/the-point-is-the-mask/</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="9-preparation-finale-pour-zenodo">9. Préparation finale pour Zenodo</h2>
+<p>Une fois toutes les étapes terminées :</p>
+<ul>
+<li>orthophoto produite,</li>
+<li>métadonnées structurées,</li>
+<li>segmentation réalisée,</li>
+</ul>
+<p>👉 la <strong>session drone est complète</strong> et <strong>prête à être déposée sur Zenodo</strong>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../blueboat/data/" class="btn btn-neutral float-left" title="Données"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../zenodo/zenodo-tools/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../blueboat/data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../zenodo/zenodo-tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Acquisition GCP - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Acquisition GCP";
+        var mkdocs_page_input_path = "tutoriels/acquisition-gcp.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../drone/traitement_session_drone/">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-download/">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../battery/">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cog-server/">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seatizen-monitoring/">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ovh_nginx_ssl/">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriels</li>
+      <li class="breadcrumb-item active">Acquisition GCP</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/tutoriels/acquisition-gcp.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mode-demploi-pour-faire-lacquisition-de-gcp-facon-ifremer-la-reunion">Mode d'emploi pour faire l'acquisition de GCP façon ifremer la réunion.</h1>
+<p>Un GCP (Ground Control Point) est un point dont la position GPS est connue avec précision. Ces points servent à recadrer les orthophotos issues de relevés réalisés avec des planches ou des drones.</p>
+<p>Dans des conditions idéales, on place un damier sous l’eau au moment de l’acquisition, et on en relève précisément la position. Dans notre cas, les GCPs sont définis à partir de repères fixes visibles, comme un poteau électrique, un corail caractéristique ou toute autre forme reconnaissable facilement sur les images.</p>
+<p>Pour réaliser cette mission, il y a quelques étapes à préparer.</p>
+<h2 id="preparation-des-points-dacquisition">Préparation des points d’acquisition</h2>
+<p>Commencez par repérer des points clairement visibles et stables dans le temps. Pour cela, utilisez une orthophoto déjà produite.</p>
+<p>Suivez le tutoriel présent dans le README du projet <a href="https://github.com/SeatizenDOI/tms-server">tms-server</a> pour afficher ces orthophotos dans QGIS.</p>
+<p>Créez une nouvelle couche de points dans QGIS. Voici un exemple de création de couche :</p>
+<p><img alt="Creation couche interdiaire" src="../../img/gcp/creation_couche_intermediaire.png" /></p>
+<p>Ajoutez ensuite des points sur les éléments facilement reconnaissables : corail atypique, épave, structure anthropique, etc.</p>
+<p>Important : N’oubliez pas de nommer chaque point avec un label clair. Cela facilitera l’identification sur le terrain.</p>
+<p><img alt="Ajout d'un point sur la couche" src="../../img/gcp/ajout_point.png" /></p>
+<p>Une fois tous les points placés, exportez la couche au format GPX. Veillez à cocher l’option <code>GPS_USE_EXTENSION</code> à <code>YES</code>.</p>
+<p><img alt="Export de la couche" src="../../img/gcp/export_format_gpx.png" /></p>
+<p>Afin de faciliter le repérage sur le terrain, réalisez des captures d’écran à plusieurs niveaux de zoom (de large à rapproché) pour chaque point.</p>
+<p>Ces images seront regroupées dans un document, à imprimer et à glisser dans un porte-vues pour le nageur. VOici un exemple de document : <a href="https://docs.google.com/document/d/1ptK9-qr9mCME2GhcnH1CtaoIks5ZM6Ax7CxGaGRJh50/edit?usp=sharing">Exemple de zoom sur les images</a></p>
+<p><img alt="Porte vue final" src="../../img/gcp/mat_cahier.jpeg" /></p>
+<h2 id="setup-de-lordinateur">Setup de l'ordinateur</h2>
+<p>Il est nécessaire d'avoir un ordinateur avec un GPS et les points de mesures à l'intérieur pour facilement se rendre sur la zone. Cela permet de la délimiter facilement.</p>
+<ul>
+<li>Un ordinateur de terrain</li>
+<li>un reach M2 avec une antenne et un cable USB pour le connecter à l'ordinateur</li>
+<li>Le logiciel <a href="https://opencpn.org/">OpenCPN</a></li>
+</ul>
+<p><img alt="Ordinateur de terrain" src="../../img/gcp/mat_getac.jpeg" /></p>
+<p>Branchez le GPS à l’ordinateur, puis configurez le port série et le débit comme montré ci-dessous :</p>
+<p><img alt="OpenCPN GPS configuration step 1" src="../../img/gcp/openCPN_gps_step1.png" />
+<img alt="OpenCPN GPS configuration step 2" src="../../img/gcp/openCPN_gps_step2.png" /></p>
+<p>Importez votre fichier GPX pour afficher les points d’intérêt dans le logiciel. Vérifiez que chaque point est bien nommé.</p>
+<p><img alt="OpenCPN GPX configuration step 1" src="../../img/gcp/openCPN_step1.png" />
+<img alt="OpenCPN GPX configuration step 2" src="../../img/gcp/openCPN_step2.png" />
+<img alt="OpenCPN GPX configuration step 3" src="../../img/gcp/openCPN_step3.png" />
+<img alt="OpenCPN GPX configuration step 4" src="../../img/gcp/openCPN_step4.png" />
+<img alt="OpenCPN GPX configuration step 5" src="../../img/gcp/openCPN_step5.png" /></p>
+<h2 id="setup-de-la-base">Setup de la base.</h2>
+<p>La base GPS est montée sur un tube en PVC. Il est important de mesurer la hauteur du tube pour la renseigner dans l'application (important pour la précision altimétrique).</p>
+<p>Vissez la base sur son support comme illustré ci-dessous :</p>
+<p><img alt="Montage de la base" src="../../img/gcp/mat_bouboul.jpeg" /></p>
+<p>Pour réaliser un survey, suivez le <a href="https://docs.emlid.com/emlid-flow/survey-with-ef/points/collector/">tutoriel</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../zenodo/zenodo-manager/" class="btn btn-neutral float-left" title="Mettre à jour Seatizen Atlas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../battery/" class="btn btn-neutral float-right" title="Gestion des batteries">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../zenodo/zenodo-manager/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../battery/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

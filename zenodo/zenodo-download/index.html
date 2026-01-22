@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Télécharger une session depuis Zenodo - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T\u00e9l\u00e9charger une session depuis Zenodo";
+        var mkdocs_page_input_path = "zenodo/zenodo-download.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../drone/traitement_session_drone/">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/acquisition-gcp/">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/battery/">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/cog-server/">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/seatizen-monitoring/">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutoriels/ovh_nginx_ssl/">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Outils pour Zenodo</li>
+      <li class="breadcrumb-item active">Télécharger une session depuis Zenodo</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/zenodo/zenodo-download.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="telecharger-un-jeu-de-donnees-depuis-seatizen-monitoring-avec-zenodo-download">Télécharger un jeu de données depuis Seatizen monitoring avec zenodo-download</h1>
+<p>Ce tutoriel explique comment extraire un sous-ensemble du jeu de données <strong>SeatizenAtlas</strong>.</p>
+<h2 id="extraction-du-sous-jeu-de-donnees">Extraction du sous-jeu de données</h2>
+<p><img alt="Exporter explanation" src="../../img/zenodo/zd_exporter_explication.jpg" /></p>
+<p>La page <strong>Explorer</strong> se compose de trois parties principales :</p>
+<ul>
+<li>la <strong>carte</strong>,</li>
+<li>la section <strong>Data Configuration</strong>,</li>
+<li>et la section <strong>Model Configuration</strong>.</li>
+</ul>
+<h3 id="explication-des-elements">Explication des éléments :</h3>
+<ol>
+<li>Permet de délimiter une ou plusieurs zones sur la carte, dans lesquelles seules les images situées à l’intérieur seront exportées.
+   ⚠️ Si aucune zone n’est dessinée, <strong>toutes les images affichées sur la carte seront exportées</strong>, ce qui peut prendre plusieurs minutes.</li>
+<li>Exemple d’une zone dessinée pour un export : ici, le regroupement de quatre sessions de planches au nord de Saint-Leu.</li>
+<li>Ce sélecteur permet de choisir les <strong>plateformes d’acquisition</strong> à prendre en compte.
+   Il est possible d’en sélectionner plusieurs, chacune étant représentée par une couleur différente.
+   La carte affiche uniquement les données des plateformes sélectionnées.</li>
+<li>Il est également possible de <strong>filtrer par période temporelle</strong> : la carte affichera uniquement les données comprises dans cette plage de temps.</li>
+<li>
+<p>Sélection des <strong>métadonnées</strong> à inclure dans l’extrait.
+   Pour obtenir un sous-jeu de données complet, il est essentiel de conserver :</p>
+</li>
+<li>
+<p>le champ <code>version_doi</code>, qui indique l’adresse où la session est stockée en ligne,</p>
+</li>
+<li>et le champ <code>relative_file_path</code>, qui correspond au chemin de l’image dans la session.</li>
+</ol>
+<hr />
+<p>Nous passons maintenant à la section <strong>Model Configuration</strong>.
+Elle n’est pas nécessaire pour l’extraction des données, mais voici son fonctionnement :</p>
+<ol>
+<li>Permet de choisir un modèle de classification <strong>multilabel</strong> (non applicable aux images issues de drones).</li>
+<li>Sélection des <strong>classes</strong> à conserver pour le modèle multilabel.</li>
+<li>Choix du <strong>type de sortie</strong> : soit les scores de prédiction, soit les valeurs binaires (présence/absence) après application d’un seuil (<em>threshold</em>).</li>
+<li>Le bouton <strong>Exporter</strong> permet de télécharger le fichier CSV correspondant.</li>
+</ol>
+<hr />
+<p>⚠️ <strong>Avertissement :</strong>
+Les prédictions présentées sur cette interface sont produites par un algorithme d’intelligence artificielle à titre informatif uniquement.
+Elles peuvent contenir des inexactitudes. L’éditeur de l’application décline toute responsabilité quant à leur interprétation ou leur utilisation.</p>
+<hr />
+<h2 id="recuperation-des-images">Récupération des images</h2>
+<p>L’export génère un fichier CSV de ce type :</p>
+<pre><code class="language-csv">FileName,GPSLatitude,GPSLongitude,version_doi,relative_file_path
+20231110_REU-ST-LEU_ASV-1_04_5_567.jpeg,-21.16281806626762,55.2865898413734,https://doi.org/10.5281/zenodo.12760339,20231110_REU-ST-LEU_ASV-1_04/PROCESSED_DATA/FRAMES/20231110_REU-ST-LEU_ASV-1_04_5_567.jpeg
+20231110_REU-ST-LEU_ASV-1_04_5_990.jpeg,-21.16282476635246,55.28659116164465,https://doi.org/10.5281/zenodo.12760339,20231110_REU-ST-LEU_ASV-1_04/PROCESSED_DATA/FRAMES/20231110_REU-ST-LEU_ASV-1_04_5_990.jpeg
+20231110_REU-ST-LEU_ASV-1_04_5_1409.jpeg,-21.162930832467936,55.28655471331759,https://doi.org/10.5281/zenodo.12760339,20231110_REU-ST-LEU_ASV-1_04/PROCESSED_DATA/FRAMES/20231110_REU-ST-LEU_ASV-1_04_5_1409.jpeg
+...
+</code></pre>
+<p>Il existe <strong>deux façons</strong> de configurer l’environnement nécessaire au téléchargement des images à partir de Zenodo :</p>
+<h3 id="1-utiliser-un-environnement-python"><strong>1. Utiliser un environnement Python</strong></h3>
+<p>Vous pouvez suivre le guide d’installation détaillé disponible ici :
+👉 <a href="https://github.com/SeatizenDOI/zenodo-tools/blob/master/README.md">README du dépôt GitHub</a></p>
+<p>Cette méthode consiste à installer localement un environnement Python, puis à exécuter le script <code>zenodo-download.py</code> pour lancer le téléchargement.</p>
+<p>Exceuter la commande : python zenodo-download.py -ecf -pcf /path/to/csv/file/provide/by/seatizen/monitoring -po /path/where/you/want/your/frames/folder</p>
+<hr />
+<h3 id="2-utiliser-docker-recommande-pour-la-simplicite"><strong>2. Utiliser Docker (recommandé pour la simplicité)</strong></h3>
+<p>Si vous préférez éviter l’installation manuelle des dépendances, vous pouvez utiliser <strong>Docker Desktop</strong>.
+Après l’avoir installé, il vous suffit d’exécuter la commande suivante :</p>
+<pre><code class="language-bash">docker run -it --user 1000 --rm \
+  -v ./path/where/you/want/your/frames/folder:/home/seatizen/plancha \
+  -v ./path/folder/where/csv/file/provided/by/seatizen/monitoring:/home/seatizen/app/csv_inputs \
+  --name zenodo-manager seatizendoi/zenodo-manager:latest bash
+</code></pre>
+<p>Cette commande :</p>
+<ul>
+<li>télécharge automatiquement l’image Docker <code>seatizendoi/zenodo-manager:latest</code>,</li>
+<li>monte vos dossiers locaux (<code>plancha_test</code> et <code>inputs</code>) à l’intérieur du conteneur,</li>
+<li>et ouvre une session interactive prête à exécuter les scripts Zenodo Tools.</li>
+</ul>
+<p>Une fois votre environnement prêt :</p>
+<p>Executer la commande :</p>
+<p><code>python zenodo-download.py -ecf -pcf /home/seatizen/app/csv_inputs/seatizen_monitoring.csv -po /home/seatizen/plancha</code></p>
+<hr />
+<p>Vous disposez désormais :</p>
+<ul>
+<li>du <strong>fichier CSV</strong> crée par Seatizen Monitoring que vous pouvez importer dans <strong>QGIS</strong> pour visualiser la position exacte de chaque image,</li>
+<li>et d’un <strong>dossier</strong> <code>/path/where/you/want/your/frames/folder/Frames</code> contenant l’ensemble des images téléchargées.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../zenodo-upload/" class="btn btn-neutral float-left" title="Envoyer une session sur Zenodo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../zenodo-manager/" class="btn btn-neutral float-right" title="Mettre à jour Seatizen Atlas">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../zenodo-upload/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../zenodo-manager/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

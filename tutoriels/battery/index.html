@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Gestion des batteries - Seatizen WIKI</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Gestion des batteries";
+        var mkdocs_page_input_path = "tutoriels/battery.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Seatizen WIKI
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plancha</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/before-session/">Guide de terrain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../plancha/after-session/">Flux de traitement des données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blueboat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/materiel/">Matériel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blueboat/data/">Données</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Drone</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../drone/traitement_session_drone/">Traitement d'une session</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Outils pour Zenodo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-tools/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-upload/">Envoyer une session sur Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-download/">Télécharger une session depuis Zenodo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../zenodo/zenodo-manager/">Mettre à jour Seatizen Atlas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriels</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../acquisition-gcp/">Acquisition GCP</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Gestion des batteries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cog-server/">Ajouter un raster sur cog-server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seatizen-monitoring/">Déployer Seatizen monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ovh_nginx_ssl/">Déployer un site OVH - NGINX - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Autres</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/photog/">Paramètres pour la photogrammetrie</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../autres/research-changelog/">Research log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Seatizen WIKI</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriels</li>
+      <li class="breadcrumb-item active">Gestion des batteries</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen/edit/master/docs/tutoriels/battery.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="guide-batteries-lipo-et-lihv">🔋 Guide Batteries LiPo et LiHV</h1>
+<p>Ce guide couvre la signification des désignations de batterie, les différences entre LiPo et LiHV, ainsi que les procédures de charge et de sécurité essentielles.</p>
+<h2 id="1-comprendre-la-tension-4s-et-152-v">1. Comprendre la tension (4S et 15,2 V)</h2>
+<p>La désignation <code>4S</code> signifie que <strong>4 cellules</strong> sont montées en série.</p>
+<table>
+<thead>
+<tr>
+<th>Type de Cellule</th>
+<th>Tension Nominale (par cellule)</th>
+<th>Tension Max (par cellule)</th>
+<th>Tension Nominale <strong>4S</strong></th>
+<th>Tension Max <strong>4S</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LiPo</strong></td>
+<td>3,7 V</td>
+<td>4,20 V</td>
+<td><strong>14,8 V</strong> (4  3,7 V)</td>
+<td>16,8 V</td>
+</tr>
+<tr>
+<td><strong>LiHV</strong> (High Voltage)</td>
+<td>3,8 V</td>
+<td>4,35 V</td>
+<td><strong>15,2 V</strong> (4  3,8 V)</td>
+<td>17,4 V</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>👉 <strong>Conclusion :</strong> Une batterie marquée <strong>15,2 V</strong> est systématiquement une <strong>LiHV</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="2-differences-cles-et-precautions-de-charge">2. Différences clés et précautions de charge</h2>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>LiPo</th>
+<th>LiHV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chargeur</strong></td>
+<td>Mode LiPo</td>
+<td><strong>Mode LiHV obligatoire</strong></td>
+</tr>
+<tr>
+<td><strong>Tension Max</strong></td>
+<td>4,20 V/cellule</td>
+<td><strong>4,35 V/cellule</strong></td>
+</tr>
+<tr>
+<td><strong>Avantages</strong></td>
+<td>Meilleure longévité, tension plus stable</td>
+<td>Boost initial, capacité légèrement supérieure</td>
+</tr>
+<tr>
+<td><strong>Inconvénients</strong></td>
+<td>Standard</td>
+<td>Durée de vie réduite si chargée systématiquement à 4,35 V</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Avertissement de charge :</strong></p>
+<ul>
+<li>
+<p><strong>NE JAMAIS</strong> charger une <strong>LiPo</strong> en mode <strong>LiHV</strong> (Risque d'incendie/explosion).</p>
+</li>
+<li>
+<p><strong>NE JAMAIS</strong> charger une <strong>LiHV</strong> en mode <strong>LiPo</strong> (Charge incomplète à seulement 16,8 V).</p>
+</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="3-elements-de-la-batterie-exemple-4s">3. Éléments de la Batterie (Exemple 4S)</h2>
+<p>Chaque batterie 4S possède <strong>deux connexions</strong> distinctes, toutes deux nécessaires à la charge :</p>
+<table>
+<thead>
+<tr>
+<th>Connexion</th>
+<th>Rôle</th>
+<th>Caractéristiques (Ex. 4S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Principal</strong> (Ex: XT60, XT90)</td>
+<td>Passage de la puissance (Charge/Décharge)</td>
+<td>2 fils : + et −</td>
+</tr>
+<tr>
+<td><strong>Équilibrage</strong> (JST-XH)</td>
+<td>Surveillance de la tension de chaque cellule</td>
+<td><strong>5 fils</strong> (4 cellules + 1 fil commun)</td>
+</tr>
+</tbody>
+</table>
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_XT60.webp" alt="Connecteur XT60">
+        <figcaption>Figure 1: Le connecteur XT60, utilisé pour la puissance.</figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_JST_XH.jpeg" alt="Connecteur JST-XH 5 pin">
+        <figcaption>Figure 2: Le connecteur d'équilibrage **JST-XH 5 broches** pour une batterie 4S.</figcaption>
+    </figure>
+</div>
+
+<hr />
+<h2 id="4-procedure-de-charge-securitaire">4. Procédure de Charge Sécuritaire</h2>
+<p>Le processus doit toujours se faire sous surveillance et sur une surface non inflammable (idéalement dans un sac LiPo ignifugé).</p>
+<h3 id="reglages-du-chargeur-pour-une-lihv-4s">⚙️ Réglages du Chargeur (pour une LiHV 4S)</h3>
+<ol>
+<li><strong>Type de batterie</strong> : <code>LiHV</code></li>
+<li><strong>Nombre de cellules</strong> : <code>4S</code></li>
+<li><strong>Tension maximale</strong> : <code>4,35 V / cellule</code> (17,4 V total)</li>
+<li><strong>Courant de charge</strong> :</li>
+<li>Règle standard : <strong>1C</strong> (Ex: 5000 mAh  <strong>5,0 A</strong>)</li>
+<li><strong>Astuce longévité</strong> : Charger à <strong>0,5C</strong> (Ex: 5000 mAh  <strong>2,5 A</strong>)</li>
+</ol>
+<h3 id="etapes-de-connexion">🔌 Étapes de Connexion</h3>
+<ol>
+<li>Connecter le câble principal (puissance).</li>
+<li>
+<p>Connecter le câble d'équilibrage JST-XH sur l'entrée <code>4S</code> du chargeur.</p>
+<blockquote>
+<p>📌 <strong>Ne jamais forcer les connecteurs.</strong></p>
+</blockquote>
+</li>
+<li>
+<p>Vérifier que le chargeur détecte bien <code>4 cellules</code>.</p>
+</li>
+<li>Lancer la charge et rester à proximité.</li>
+</ol>
+<h3 id="fin-de-charge">Fin de Charge</h3>
+<ul>
+<li>Une LiHV 4S pleine doit atteindre <strong>17,4 V</strong> total.</li>
+<li>L'écart entre les cellules doit être faible (0.1 V).</li>
+<li>Débrancher toujours le <strong>câble principal</strong> en premier.</li>
+</ul>
+<hr />
+<h2 id="5-stockage-et-decharge">5. Stockage et Décharge</h2>
+<h3 id="stockage-mode-storage">Stockage (Mode STORAGE)</h3>
+<p>Pour maximiser la durée de vie, les LiPo et LiHV doivent être stockées dans le mode <strong>STORAGE</strong> du chargeur, à une tension de :</p>
+<ul>
+<li><strong>3,80 V à 3,85 V par cellule</strong></li>
+</ul>
+<h3 id="courbe-de-decharge-lihv-vs-lipo">Courbe de Décharge (LiHV vs LiPo)</h3>
+<ul>
+<li><strong>LiPo :</strong> Tension max 4,20 V. Plateau de tension plus long et stable.</li>
+<li><strong>LiHV :</strong> Tension max 4,35 V. Subit une <strong>chute de tension rapide</strong> en début de décharge.</li>
+</ul>
+<p><strong>Pourquoi cette chute rapide ?</strong>
+La zone entre 4,20 V et 4,35 V n'est pas une zone de fonctionnement stable. Dès qu'un courant est demandé, la tension chute naturellement vers la zone stable de 4,1–4,2 V.
+<strong>Une chute rapide après 30 secondes d'utilisation NE signifie PAS que la batterie est vide.</strong></p>
+<hr />
+<h2 id="6-securite-et-erreurs-a-eviter">6. Sécurité et Erreurs à Éviter</h2>
+<table>
+<thead>
+<tr>
+<th>À Faire (Sécurité)</th>
+<th>À Éviter (Erreurs Fréquentes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Rester à proximité pendant la charge.</td>
+<td>❌ Oublier le câble d'équilibrage.</td>
+</tr>
+<tr>
+<td>✅ Charger sur une surface non inflammable.</td>
+<td>❌ Charger sur un courant excessif.</td>
+</tr>
+<tr>
+<td>✅ Utiliser le mode <strong>STORAGE</strong> pour le rangement.</td>
+<td>❌ Charger une LiHV en mode LiPo.</td>
+</tr>
+<tr>
+<td>❌ Ne jamais charger une batterie gonflée.</td>
+<td>❌ Laisser une charge sans surveillance.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="liens">Liens</h2>
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_chargeur.jpg" alt="Chargeur Gens Ace Imars Dual">
+        <figcaption>Figure 3: <a href="https://www.amazon.fr/Gens-Batterie-Balance-Chargeur-D%C3%A9chargeur/dp/B09SWS6YZK?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VXEVVCECIVJT&dib=eyJ2IjoiMSJ9.0n2GJwtoGJlRtcpccSP4CPeNkv2yXDK5YALRbrdQYmJu6vPSLqKR8Y2EbC_Qyuo-uYinpS4AMkcHodnozFOSIIredlc2m7xE_Ll6zIgDOOJOFP6g-GUJ_cgKGoISYgvPCyT8QbWt7kwqafe6TOUPnR6v7XxVgp16Hp0fC1VQA1DhmMSmwSRmzoFfdffDIofe5jlTA7LBxrdtRIjtBI-k5MHJFPXvUzwuKg4nJCdOCTT1MlL4JEA6qclkLW07hePlZu1bq7Fd6dR9iJ3YRjJjKlVj1LQL56GlYur8m5HQ5Y0.K8LuJfiQ3xm5SInthJpaFEpE3r8CcaIHeq3pPmkvLHk&dib_tag=se&keywords=chargeur%2Bgens%2Bace&qid=1768139738&sprefix=chargeur%2Blipo%2B4s%2Bgensace%2Caps%2C398&sr=8-7&th=1">Gens Ace Chargeur de Batterie Imars Dual</a></figcaption>
+    </figure>
+</div>
+
+<div align="center">
+    <figure>
+        <img src="/img/tutoriels/battery_battery.webp" alt="Battery LiHV 4S">
+        <figcaption>Figure 3: <a href="https://www.powerhobby.com/products/gens-ace-advanced-g-tech-10000mah-15-2v-100c-4s2p-hardcase-lipo-battery-pack-61-with-ec5-plug?variant=51467570250050&country=AT&currency=EUR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic">Gens ace Advanced G-Tech 10000mAh</a></figcaption>
+    </figure>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../acquisition-gcp/" class="btn btn-neutral float-left" title="Acquisition GCP"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cog-server/" class="btn btn-neutral float-right" title="Ajouter un raster sur cog-server">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SeatizenDOI/wiki-seatizen" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../acquisition-gcp/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cog-server/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
